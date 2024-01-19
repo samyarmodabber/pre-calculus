@@ -19,8 +19,8 @@ book:
   author: "سامیار"
   date: "1/06/2024"
   image: logo.png
-  cover-image: logo.png
-  favicon: logo.pn
+  # cover-image: logo.png
+  favicon: logo.png
   reader-mode: true
   
   search:
