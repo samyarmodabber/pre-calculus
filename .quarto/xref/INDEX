@@ -58,5 +58,17 @@
   },
   "chapters/Set/intro.md": {
     "intro.html": "ec0a5276"
+  },
+  "chapters/Algebra/polynomial.rtl.md": {
+    "polynomial.rtl.html": "8cb7cb96"
+  },
+  "chapters/Algebra/equation.rtl.md": {
+    "equation.rtl.html": "181f0fc0"
+  },
+  "chapters/Algebra/non-equation.rtl.md": {
+    "non-equation.rtl.html": "33839390"
+  },
+  "chapters/Algebra/system.rtl.md": {
+    "system.rtl.html": "ff755363"
   }
 }
