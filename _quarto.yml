@@ -40,12 +40,12 @@ book:
     # search: true
     alignment: right
     logo: logo.png
-  page-footer:
-    center: 
-      - text: "درباره ما"
-        href: pages/about.qmd
-      - text: "License"
-        href: pages/license.qmd
+  # page-footer:
+  #   center: 
+  #     - text: "درباره ما"
+  #       href: pages/about.qmd
+      # - text: "License"
+      #   href: pages/license.qmd
   chapters:
     - index.qmd
     - part: "نظریه مجموعه ها"
