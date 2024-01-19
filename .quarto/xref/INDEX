@@ -1,0 +1,62 @@
+{
+  "index.qmd": {
+    "index.html": "6d86bcb9"
+  },
+  "intro.qmd": {
+    "intro.html": "793441df"
+  },
+  "summary.qmd": {
+    "summary.html": "63494647"
+  },
+  "references.qmd": {
+    "references.html": "35771188"
+  },
+  "chapters/Set/intro.qmd": {
+    "intro.html": "5a159ad6"
+  },
+  "chapters/Functions/intro.qmd": {
+    "intro.html": "fcd2a868"
+  },
+  "pages/about.qmd": {
+    "about.html": "a758da15"
+  },
+  "pages/license.qmd": {
+    "license.html": "282c9939"
+  },
+  "منابع.qmd": {
+    "منابع.html": "ca73b08f"
+  },
+  "chapters/RealNumbers/intro.qmd": {
+    "intro.html": "c0884e35"
+  },
+  "chapters/RealNumbers/intro.rtl.md": {
+    "intro.rtl.html": "68728be8"
+  },
+  "chapters/RealNumbers/00real-set.rtl.md": {
+    "00real-set.rtl.html": "344ad37b"
+  },
+  "chapters/RealNumbers/01power.rtl.md": {
+    "01power.rtl.html": "e47a05db"
+  },
+  "chapters/RealNumbers/02abs.rtl.md": {
+    "02abs.rtl.html": "3066e4b5"
+  },
+  "chapters/RealNumbers/03log.rtl.md": {
+    "03log.rtl.html": "bc301532"
+  },
+  "chapters/RealNumbers/04step.rtl.md": {
+    "04step.rtl.html": "337d579b"
+  },
+  "chapters/Set/intro.rtl.md": {
+    "intro.rtl.html": "573955ac"
+  },
+  "chapters/Functions/intro.rtl.md": {
+    "intro.rtl.html": "3bc3fa9d"
+  },
+  "chapters/RealNumbers/00real-set.qmd": {
+    "00real-set.html": "2968e970"
+  },
+  "chapters/Set/intro.md": {
+    "intro.html": "ec0a5276"
+  }
+}

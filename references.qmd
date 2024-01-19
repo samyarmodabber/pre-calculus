@@ -1,0 +1,13 @@
+# منابع {.unnumbered}
+
+من منبع بسیاری را نمیدانم. اما بیشتر منابع کتابهای درسی دانشگاهی به زبان فارسی است.
+
+تصاویر:
+
+* [cuemath](https://www.cuemath.com/)
+
+* [oercommons](https://oercommons.org/)
+
+
+::: {#refs}
+:::

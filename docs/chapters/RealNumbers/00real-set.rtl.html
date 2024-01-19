@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ریاضیات پیشدانشگاهی (نظریه٬ کاربرد و تمرین) - 2&nbsp; دستگاه حقیقی</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../references.html" rel="next">
+<link href="../../chapters/Set/intro.html" rel="prev">
+<link href="../../logo.pn" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ریاضیات پیشدانشگاهی (نظریه٬ کاربرد و تمرین)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/RealNumbers/00real-set.rtl.html">دستگاه حقیقی</a></li><li class="breadcrumb-item"><a href="../../chapters/RealNumbers/00real-set.rtl.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دستگاه حقیقی</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمه</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">نظریه مجموعه ها</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Set/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">مجموعه</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">دستگاه حقیقی</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/RealNumbers/00real-set.rtl.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دستگاه حقیقی</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">منابع</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">فهرست</h2>
+   
+  <ul class="collapse">
+  <li><a href="#مجموعه-ها-ی-اعداد" id="toc-مجموعه-ها-ی-اعداد" class="nav-link active" data-scroll-target="#مجموعه-ها-ی-اعداد"><span class="header-section-number">2.1</span> مجموعه ها ی اعداد</a></li>
+  <li><a href="#مجموعه-ی-اعداد-طبیعی" id="toc-مجموعه-ی-اعداد-طبیعی" class="nav-link" data-scroll-target="#مجموعه-ی-اعداد-طبیعی"><span class="header-section-number">2.2</span> مجموعه ی اعداد طبیعی</a></li>
+  <li><a href="#گزاره" id="toc-گزاره" class="nav-link" data-scroll-target="#گزاره"><span class="header-section-number">2.3</span> گزاره</a></li>
+  <li><a href="#مثال" id="toc-مثال" class="nav-link" data-scroll-target="#مثال"><span class="header-section-number">2.4</span> مثال</a></li>
+  <li><a href="#اعداد-اعشاری" id="toc-اعداد-اعشاری" class="nav-link" data-scroll-target="#اعداد-اعشاری"><span class="header-section-number">2.5</span> اعداد اعشاری</a></li>
+  <li><a href="#مثال-1" id="toc-مثال-1" class="nav-link" data-scroll-target="#مثال-1"><span class="header-section-number">2.6</span> مثال</a></li>
+  <li><a href="#بی-نهایت" id="toc-بی-نهایت" class="nav-link" data-scroll-target="#بی-نهایت"><span class="header-section-number">2.7</span> بی نهایت</a></li>
+  <li><a href="#ترتیب-اعداد-حقیقی" id="toc-ترتیب-اعداد-حقیقی" class="nav-link" data-scroll-target="#ترتیب-اعداد-حقیقی"><span class="header-section-number">2.8</span> ترتیب اعداد حقیقی</a></li>
+  <li><a href="#قانون-تثلیت" id="toc-قانون-تثلیت" class="nav-link" data-scroll-target="#قانون-تثلیت"><span class="header-section-number">2.9</span> قانون تثلیت</a></li>
+  <li><a href="#گزاره-ویژگی-های-تثلیث" id="toc-گزاره-ویژگی-های-تثلیث" class="nav-link" data-scroll-target="#گزاره-ویژگی-های-تثلیث"><span class="header-section-number">2.10</span> گزاره: ویژگی های تثلیث</a></li>
+  <li><a href="#نمایش-اعداد-حقیقی" id="toc-نمایش-اعداد-حقیقی" class="nav-link" data-scroll-target="#نمایش-اعداد-حقیقی"><span class="header-section-number">2.11</span> نمایش اعداد حقیقی</a></li>
+  <li><a href="#مثال-2" id="toc-مثال-2" class="nav-link" data-scroll-target="#مثال-2"><span class="header-section-number">2.12</span> مثال</a></li>
+  <li><a href="#اصل-ارشمیدسی-اعداد-حقیقی" id="toc-اصل-ارشمیدسی-اعداد-حقیقی" class="nav-link" data-scroll-target="#اصل-ارشمیدسی-اعداد-حقیقی"><span class="header-section-number">2.13</span> اصل ارشمیدسی اعداد حقیقی</a></li>
+  <li><a href="#نتیجه" id="toc-نتیجه" class="nav-link" data-scroll-target="#نتیجه"><span class="header-section-number">2.14</span> نتیجه</a></li>
+  <li><a href="#بازه-ها" id="toc-بازه-ها" class="nav-link" data-scroll-target="#بازه-ها"><span class="header-section-number">2.15</span> بازه ها</a></li>
+  <li><a href="#تذکر" id="toc-تذکر" class="nav-link" data-scroll-target="#تذکر"><span class="header-section-number">2.16</span> تذکر</a></li>
+  <li><a href="#مثال-3" id="toc-مثال-3" class="nav-link" data-scroll-target="#مثال-3"><span class="header-section-number">2.17</span> مثال</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دستگاه حقیقی</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="مجموعه-ها-ی-اعداد" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="مجموعه-ها-ی-اعداد"><span class="header-section-number">2.1</span> مجموعه ها ی اعداد</h2>
+<p>بعضی مجموعه های اعداد در ریاضیات از اهمیت ویژه ای برخوردارند، به همین دلیل با نامگذاری خاصی این مجموعه ها را از مجموعه های دیگر متمایز می کنیم:</p>
+<p>مجموعه اعداد طبیعی</p>
+<p><span class="math display">\[
+\mathbb{N} := \left\{ 1,2,3,\ldots \right\}
+\]</span></p>
+<p>مجموعه ی اعداد شمارشی (حسابی)</p>
+<p><span class="math display">\[
+\mathbb{W} := \left\{ 0,1,2,3,\ldots \right\}
+\]</span></p>
+<p>مجموعه ی اعداد صحیح</p>
+<p><span class="math display">\[
+\mathbb{Z} := \left\{ \ldots, - 2, - 1,0,1,2,\ldots \right\}
+\]</span></p>
+<p>مجموعه ی اعداد گویا (کسری)</p>
+<p><span class="math display">\[
+\mathbb{Q} := \left\{ \left. \ \frac{a}{b}\  \right|\ a,b\mathbb{\in Z}\ \&amp;\ b \neq 0 \right\}
+\]</span></p>
+<p>مجموعه ی اعداد گنگ (اصم)</p>
+<p><span class="math display">\[
+\mathbb{Q}^{c} := \mathbb{R}\backslash\mathbb{Q}
+\]</span></p>
+<p>مجموعه ی اعداد حقیقی</p>
+<p><span class="math display">\[
+\mathbb{R} := \mathbb{Q}^{c} \cup \mathbb{Q}
+\]</span></p>
+<p>از تعریف مجموعه های بالا واضح است که</p>
+<p><span class="math display">\[
+\mathbb{N \subset W \subset Z \subset Q \subset R}.
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{Q}^{c} \subset \mathbb{R}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../RealNumbers/images/real-numbers-subsets.png" title="مجموعه اعداد" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">مجموعه ی اعداد</figcaption>
+</figure>
+</div>
+<p>تذکر:</p>
+<p>مجموعه ی دیگری از اعداد نیز وجود دارد که به اعداد مختلط موسوم است و آن را با نماد <span class="math inline">\(\mathbb{C}\)</span> نمایش می دهند. با این مجموعه در درس های آینده آشنا خواهیم شد و خواهیم دید که <span class="math inline">\(\mathbb{R \subset C}\)</span>.</p>
+</section>
+<section id="مجموعه-ی-اعداد-طبیعی" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="مجموعه-ی-اعداد-طبیعی"><span class="header-section-number">2.2</span> مجموعه ی اعداد طبیعی</h2>
+<p>کلمه حقیقی که برای نامیدن اعداد حقیقی به کار می رود، در مقابل کلمه ی موهومی است که گاهی برای نامیدن اعداد مختلط به کار می رود. برای معرفی دستگاه اعداد حقیقی روش های مختلفی وجود دارد.ریاضیدان ایتالیایی جوزف پئانو پنج اصل موضوعه را برای اعداد طبیعی وضع نمود و این خود نقطه شروعی برای ساختن اعداد حقیقی بود.کارل وایر شتراس، ریچارد دد کیند و کانتور بزرگ هر کدام روشی برای ساختن اعداد گنگ از اعداد گویا مطرح کردند. در اینجا با نحوه ی ساختن با نحوه ی ساختن اعداد حقیقی کاری نداریم بلکه اعداد را به عنوان موجودات و اشیا تعریف نشده ی ریاضی در نظر می گیریم که از ویژگی هایی که اصول موضوعه نامیده می شوند پیروی می کنند. در اصول موضوعه زیر از حروف کوچک <span class="math inline">\(a,b,c,\ldots,y,z\)</span> برای نمایش اعداد حقیقی دلخواه استفاده می کنیم.</p>
+<p>فرض کنید متناظر با هر دو عدد طبیعی <span class="math inline">\(b\)</span> و <span class="math inline">\(a\)</span> عدد حقیقی دیگری که آن را مجموع <span class="math inline">\(bو\ a\)</span> می نامند و با نماد <span class="math inline">\(a + b\)</span> نمایش می دهند موجود باشد، همچنین فرض کنید حاصل ضرب این دو عدد حقیقی باشد که با نماد <span class="math inline">\(ab\ یا\ a.b\)</span> نمایش داده می شود.مجموعه ی اعداد حقیقی به همراه اعمال جمع و ضرب در اصول موضوعه زیر صدق می کند:</p>
+<ol type="1">
+<li>وجود عضو خنثا</li>
+</ol>
+<p>دو عدد یکتای 0 و 1 موجودند به طوری که به ازای هر عدد حقیقی <span class="math inline">\(a\)</span> داریم:</p>
+<p><span class="math display">\[a.1 = a, \\ a + 0 = a\]</span></p>
+<ol start="2" type="1">
+<li>وجود عضو وارون</li>
+</ol>
+<p>به ازای هر عدد حقیقی <span class="math inline">\(a\)</span> عددی حقیقی مانند <span class="math inline">\(b\)</span> هست به طوری که</p>
+<p><span class="math display">\[a + b = 0\]</span> عدد <span class="math inline">\(b\)</span> را قرینه (وارونه جمعی) عدد<span class="math inline">\(a\)</span> می نامند و آن را با نماد <span class="math inline">\(-a\)</span> نشان می دهند.</p>
+<p>به ازای هر عدد حقیقی <span class="math inline">\(a\neq 0\)</span> عددی حقیقی مانند <span class="math inline">\(b\)</span> وجود دارد، به طوری که</p>
+<p><span class="math display">\[a.b = 1\]</span></p>
+<p>عدد <span class="math inline">\(b\)</span> را معکوس (وارون ضربی) عدد <span class="math inline">\(a\)</span> می نامیم و آن را با نماد <span class="math inline">\(a^{-1}\)</span> یا <span class="math inline">\(\frac{1}{a}\)</span> نمایش می دهیم.</p>
+<ol start="3" type="1">
+<li>قانون جابجایی</li>
+</ol>
+<p>به ازای هر دو عدد حقیقی <span class="math inline">\(b\)</span> و <span class="math inline">\(a\)</span> داریم</p>
+<p><span class="math display">\[ a + b = b + a \\
+ab = ba\]</span></p>
+<ol start="4" type="1">
+<li>قانون شرکت پذیری</li>
+</ol>
+<p>به ازای هر سه عدد حقیقی <span class="math inline">\(a, b, c\)</span> داریم</p>
+<p><span class="math display">\[a + (b + c) = (a + b) + c \\ a(bc) = (ab)c\]</span></p>
+<ol start="5" type="1">
+<li>قانون توزیع پذیری</li>
+</ol>
+<p>به ازای هر سه عدد حقیقی <span class="math inline">\(a, b, c\)</span> داریم</p>
+<p><span class="math display">\[
+a(b + c) = ab + ac.
+\]</span></p>
+</section>
+<section id="گزاره" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="گزاره"><span class="header-section-number">2.3</span> گزاره</h2>
+<p>با به کار بردن اصول بالا به راحتی می توان خواص زیر را نتیجه گرفت</p>
+<ol type="1">
+<li><p>قانون حذف برای جمع: هر گاه <span class="math inline">\(a + b = b + c\)</span> آن گاه <span class="math inline">\(a = b\)</span></p></li>
+<li><p>قانون حذف برای ضرب: هر گاه <span class="math inline">\(c \neq 0\)</span> و <span class="math inline">\(ac = bc\)</span> آنگاه <span class="math inline">\(a = b\)</span></p></li>
+<li><p>هر گاه <span class="math inline">\(ab = 0\)</span> آن گاه <span class="math inline">\(b = 0\)</span> یا <span class="math inline">\(a = 0\)</span></p></li>
+<li><p>هر گاه <span class="math inline">\(d \neq 0\)</span> و <span class="math inline">\(b = 0\)</span> آن گاه <span class="math inline">\(.\frac{a}{b}.\frac{c}{d} = \frac{ac}{bd}\)</span></p></li>
+<li><p>هر گاه <span class="math inline">\(d \neq 0\)</span> و $ b = 0$ آن گاه <span class="math inline">\(.\frac{a}{b} + \frac{c}{d} = \frac{ad = bc}{bd}\)</span></p></li>
+<li><p>طرفین-وسطین: هر گاه <span class="math inline">\(ad = bc\ \frac{a}{b} = \frac{c}{d}\)</span> و $ d &nbsp;،b $</p></li>
+<li><p>دور در دور و نزدیک در نزدیک: هرگاه <span class="math inline">\(d \neq 0\)</span> و $ c &nbsp;،b $ آن گاه <span class="math inline">\(.\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}\)</span></p></li>
+<li><p>هر گاه <span class="math inline">\(a^{2} + b^{2} = 0\)</span> آن گاه <span class="math inline">\(a = 0\)</span> و <span class="math inline">\(b = 0\)</span></p></li>
+</ol>
+</section>
+<section id="مثال" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="مثال"><span class="header-section-number">2.4</span> مثال</h2>
+<ul>
+<li><p>اگر <span class="math inline">\(x\left( x^{2} - 1 \right) = 0\)</span> آنگاه <span class="math inline">\(x^{2} - 1 = 0\)</span> یا <span class="math inline">\(x = 0\)</span></p></li>
+<li><p>در تساوی <span class="math inline">\(\frac{x}{x^{3} + x + 1}.\frac{x^{2} - 1}{5} = \frac{x(x^{2} - 1)}{5(x^{3} + x + 1)}\)</span> حاصل ضرب دو کسر تبدیل یک کسر شده است، اما در بسیاری از موارد باید عکس این کار را انجام دهیم، یعنی کسر <span class="math inline">\(\frac{x(x^{2} - 1)}{5(x^{3} + x + 1)}\)</span> را به صورت <span class="math inline">\(\frac{x}{x3 + x + 1}.\frac{x^{2} - 1}{5}\)</span> بنویسیم.</p></li>
+<li><p><span class="math inline">\(\frac{3 + 5}{3} \neq 5\)</span> ، یعنی حق نداریم <em>3</em> در صورت کسر را با <em>3</em> درمخرج کسر ساده کنیم.</p></li>
+<li><p>ولی در عبارت <span class="math inline">\(\frac{3 \times 5}{3}\)</span> می توان <em>3</em> در صورت کسر را با <em>3</em> در مخرج کسر ساده نمود و نوشت <span class="math inline">\(\frac{3 \times 5}{3}\)</span><em>=5</em></p></li>
+<li><p><span class="math inline">\(\frac{\frac{x}{x^{2} - 1}}{\frac{5}{x^{2} + 1}} = \frac{x(x^{2} + 1)}{5(x^{2} - 1)}\)</span></p></li>
+</ul>
+</section>
+<section id="اعداد-اعشاری" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="اعداد-اعشاری"><span class="header-section-number">2.5</span> اعداد اعشاری</h2>
+<p>اعداد اعشاری به دو دسته تقسیم می شوند:</p>
+<p>الف. اعداد اعشاری مختوم (اعداد با تعداد ارقام اعشاری متناهی)، مانند <span class="math inline">\(.\frac{3}{14,}\frac{12}{21},\frac{5}{4}\)</span></p>
+<p>ب. اعداد با تمام ارقام اعشاری نامتناهی که خود به دو دسته تقسیم می شود</p>
+<ol type="1">
+<li>اعدادی که در آنها یک دسته از ارقام اعشار تکرار می شود، این دسته از اعداد گویا است.</li>
+</ol>
+<p>برای مثال</p>
+<p><span class="math display">\[
+\frac{1}{3} = 0.333\ldots = 0.\overline{3} \in Q.
+\]</span></p>
+<ol start="2" type="1">
+<li>هیچ دسته از ارقام اعشار به طور متناوب تکرار نمی شود، مانند اعضای <span class="math inline">\(Q^{c}\)</span> برای مثال،</li>
+</ol>
+<p><span class="math display">\[
+\pi = 3.1415926535\ldots \in Q^{c}.
+\]</span></p>
+<p>همچنین</p>
+<p><span class="math display">\[
+e = 2.7182818284\ldots  \in Q^{c}.
+\]</span></p>
+</section>
+<section id="مثال-1" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="مثال-1"><span class="header-section-number">2.6</span> مثال</h2>
+<p>نشان دهید که <span class="math inline">\(0.9999\ldots = 1\)</span></p>
+<p>اثبات.</p>
+<p><span class="math display">\[
+\begin{align*}
+0.9999 \ldots &amp;= 0.9 + 0.09 + 0.009 + 0.0009 + \ldots \\
+&amp;= \frac{9}{10} + \frac{9}{100} + \frac{9}{1000} + \frac{9}{10000} + \ldots \\
+&amp;= \frac{9}{10} + \frac{9}{100} + \frac{9}{1000} + \frac{9}{10^{5}} + \ldots \\
+&amp;= \frac{9}{10}\left( 1 + \frac{1}{10} + \frac{1}{100} + \frac{1}{1000} + \ldots \right)
+\end{align*}
+\]</span></p>
+<p>که عبارت داخل پرانتز یک تصاعد هندسی با قدر نسبت <span class="math inline">\(q = \frac{1}{10}\)</span> و <span class="math inline">\(t_{1 =}1\)</span> است پس</p>
+<p><span class="math display">\[
+0.9999 \ldots = \frac{9}{10}\left( \frac{1}{1 - \frac{1}{10}} \right) = \frac{9}{10}\left( \frac{10}{9} \right) = 1.
+\]</span></p>
+<p>تذکر:</p>
+<p>از دبیرستان با تصاعد هندسی آشنایی داریم، در یک تصاعد هندسی که جمله اول آن <span class="math inline">\(t_{1}\)</span> و قدر نسبت آن <span class="math inline">\(q\)</span> باشد داریم:</p>
+<p><span class="math display">\[
+|q| &gt; 1 \Rightarrow s_{n} = \frac{t_{1}\left( 1 - q^{n} \right)}{1 - q}
+\]</span></p>
+<p><span class="math display">\[
+|q| &lt; 1\overset{n \rightarrow \infty}{\Rightarrow}s_{n} = \frac{t_{1}}{1 - q}
+\]</span>.</p>
+</section>
+<section id="بی-نهایت" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="بی-نهایت"><span class="header-section-number">2.7</span> بی نهایت</h2>
+<p>از نماد <span class="math inline">\(\infty\)</span> که بی نهایت خوانده می شود بسیار استفاده خواهیم کرد توجه کنید که بی نهایت یک عدد نیست بلکه صرفا نمادی را برای نشان دادن یک مفهوم ریاضی است، این مفهوم که یک عدد حقیقی می تواند از هر اندازه ی قابل تصور باز هم بیشتر و بزرگتر باشد را با نماد <span class="math inline">\(\infty\)</span> نشان می دهیم. از آن جایی که <span class="math inline">\(\infty\)</span> نمادی برای بیان یک مفهوم ریاضی است پس هرگز نمی توان آن را در محاسبات مانند اعداد به کاربرد و نوشت <span class="math inline">\(\infty - \infty = 0\)</span> یا <span class="math inline">\(.\frac{\infty}{\infty}\)</span></p>
+<p>برای مثال اگر از بی نهایت عدد طبیعی بی نهایت عدد فرد کنار گذاشته شود، همچنان بی نهایت عدد زوج باقی خواهد ماند.</p>
+</section>
+<section id="ترتیب-اعداد-حقیقی" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="ترتیب-اعداد-حقیقی"><span class="header-section-number">2.8</span> ترتیب اعداد حقیقی</h2>
+<p>خاصیت ترتیب اعداد حقیقی که یک سرمایه ی بزرگ و ذاتی آنها است ریشه ی بسیاری از مفاهیم کاربردی این اعداد به شمار می رود. اگر بخواهیم مفهوم ترتیب را به مجموعه ی اعداد حقیقی القاء نماییم، لازم است مفاهیم مثبت و منفی بودن اعداد را مطرح نماییم. برای این که با بعضی مفاهیم محض و بنیادین درگیر نشویم، مفهوم مثبت بودن را به عنوان یک مفهوم تعریف نشده ی ریاضی می پذیریم.</p>
+<p>مجموعه ی اعداد حقیقی مثبت را با نماد <span class="math inline">\(\mathbb{R}^{+}\)</span> و مجموعه ی همه ی اعداد حقیقی منفی را با نماد <span class="math inline">\(\mathbb{R}^{-}\)</span> نشان می دهیم. <span class="math inline">\(\mathbb{R}^{+}\)</span> با سه اصل موضوعه زیر مشخص می شود:</p>
+<p>الف. <span class="math inline">\(.0 \neq \mathbb{R}^{+}\)</span></p>
+<p>ب .به ازای هر عدد حقیقی ناصفر <span class="math inline">\(a\)</span> یا <span class="math inline">\(a \in \mathbb{R}^{+}\)</span> یا <span class="math inline">\(- a \in \mathbb{R}^{+}\)</span>. (مقصود از حرف ربط یا، همان یا در زبان فارسی است. که با حرف ربط یا در زبان ریاضی( در منطق دوارزشی) کمی متفاوت است.)</p>
+<p>ج. حاصل جمع و ضرب هر دو عدد حقیقی مثبت مجددا یک عدد حقیقی مثبت خواهد بود، به اصطلاح ریاضی مجموعه ی <span class="math inline">\(\mathbb{R}^{+}\)</span> نسبت به اعمال جمع و ضرب بسته است.</p>
+<p>از این سه اصل موضوعه، مفاهیم کوچکتری و بزرگتری متولد می شوند:</p>
+<ul>
+<li>می گوییم <span class="math inline">\(a\)</span> کوچکتر از <span class="math inline">\(b\)</span> است و می نویسیم <span class="math inline">\(a &lt; b\)</span>، هر گاه <span class="math inline">\(b - a\)</span> مثبت باشد.</li>
+<li>می گوییم <span class="math inline">\(\ a\)</span> بزرگتر از <span class="math inline">\(b\)</span> است و مینویسیم <span class="math inline">\(a &gt; b\)</span>، هر گاه <span class="math inline">\(a - b\)</span> مثبت باشد.</li>
+</ul>
+<p>پس اگر <span class="math inline">\(a &gt; 0\)</span> آن گاه <span class="math inline">\(a\)</span> مثبت است، و اگر <span class="math inline">\(0 &gt; a\)</span> آن گاه <span class="math inline">\(a\)</span> مثبت نیست. اگر<span class="math inline">\(a\)</span> عددی مثبت نباشد آن را منفی می نامیم.</p>
+<p>همچنین مفاهیم “کوچکتر یامساوی با” و”بزرگتر یا مساوی با” را می توان به صورت زیر تعریف کرد:</p>
+<ul>
+<li>می گوییم <span class="math inline">\(a\)</span> کوچکتر یا مساوی با <span class="math inline">\(b\)</span> است و می نویسیم <span class="math inline">\(،a \leq b\)</span> هر گاه <span class="math inline">\(a &lt; b\)</span> یا <span class="math inline">\(a = b\)</span> باشد.</li>
+<li>می گوییم <span class="math inline">\(a\)</span> بزرگتر یا مساوی با <span class="math inline">\(b\)</span> است و می نویسیم <span class="math inline">\(،a \geq b\)</span> هر گاه <span class="math inline">\(a &gt; b\)</span> یا <span class="math inline">\(a = b\)</span> باشد.</li>
+</ul>
+<p>حال با استفاده از اصول موضوعه ی بالا و مفاهیم کوچکتری و بزرگتری می توان قضایای مهمی را نتیجه گرفت، که یکی از مهم ترین آنها قانون تثلیت است:</p>
+</section>
+<section id="قانون-تثلیت" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="قانون-تثلیت"><span class="header-section-number">2.9</span> قانون تثلیت</h2>
+<p>به ازای هر دو عدد حقیقی <span class="math inline">\(a\)</span> و <span class="math inline">\(b\)</span> یکی و تنها یکی از سه رابطه ی زیر درست است:</p>
+<p>الف. <span class="math inline">\(a \gt b\)</span></p>
+<p>ب. <span class="math inline">\(a \lt b\)</span></p>
+<p>ج. <span class="math inline">\(a = b\)</span></p>
+</section>
+<section id="گزاره-ویژگی-های-تثلیث" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="گزاره-ویژگی-های-تثلیث"><span class="header-section-number">2.10</span> گزاره: ویژگی های تثلیث</h2>
+<p>از جمله قوانین دیگر نامساوی ها که از اصول موضوعه بالا نتیجه می شود می توان به قوانین زیر اشاره کرد:</p>
+<p>الف. هر گاه <span class="math inline">\(b \lt c\)</span> و <span class="math inline">\(a \lt b\)</span> آن گاه می توان نتیجه گرفت <span class="math inline">\(a \lt c\)</span> این مطلب به قانون قیاس معروف است.</p>
+<p>ب. به طرفین یک نامساوی میتوان یک عدد ثابت مانند <span class="math inline">\(c\)</span> را اضافه نمود، همچنین از طرفین یک نامساوی می توان یک عدد ثابت مانند <span class="math inline">\(c\)</span> را کم کرد.</p>
+<p>ج. اگر طرفین یک نامساوی را در عددی مثبت مانند <span class="math inline">\(c &gt; 0\)</span> ضرب کنیم، جهت نامساوی عوض نمی شود به عبارت دیگر هرگاه <span class="math inline">\(ac \gt bc\)</span> آنگاه <span class="math inline">\(c \gt 0\)</span> و <span class="math inline">\(a \gt b\)</span></p>
+<p>د. اگر طرفین یک نامساوی را در عددی منفی مانند <span class="math inline">\(c \lt 0\)</span> ضرب کنیم، جهت نامساوی عوض می شود به عبارت دیگر هرگاه <span class="math inline">\(ac \lt bc\)</span> آنگاه <span class="math inline">\(c \lt 0\)</span> و <span class="math inline">\(a \gt b\)</span></p>
+<p>ه. اگر طرفین یک نامساوی را بر عددی مثبت مانند <span class="math inline">\(c \gt 0\)</span> تقسیم نماییم جهت نامساوی عوض نمی شود به عبارت دیگر هرگاه <span class="math inline">\(\frac{a}{c} \gt \frac{b}{c}\)</span> آنگاه <span class="math inline">\(c \gt 0\)</span> و <span class="math inline">\(a \gt b\)</span></p>
+<p>و. اگر طرفین یک نامساوی را بر عددی منفی مانند <span class="math inline">\(c \lt 0\)</span> تقسیم نماییم، جهت نامساوی عوض می شود به عبارت دیگر هرگاه <span class="math inline">\(.\frac{a}{c} \lt \frac{b}{c}\)</span> آنگاه <span class="math inline">\(c \lt 0\)</span> و <span class="math inline">\(a \gt b\)</span></p>
+<p>ز. اگر طرفین یک نامساوی هم علامت باشند و جای صورت و مخرج را با هم عوض کنیم یعنی طرفین را معکوس نماییم، جهت نامساوی عوض می شود</p>
+<p>به عبارت دیگر هر گاه <span class="math inline">\(\frac{a}{b} \lt \frac{c}{d}\)</span> و این دو کسر هم علامت باشند، یعنی <span class="math inline">\(\frac{a}{b} \gt 0\)</span> و <span class="math inline">\(\frac{c}{d}\gt 0\)</span> یا این که <span class="math inline">\(\frac{a}{b} \lt 0\)</span> و <span class="math inline">\(\frac{c}{d} \lt 0\)</span> آن گاه <span class="math inline">\(\frac{b}{a} \gt \frac{d}{c}\)</span>.</p>
+</section>
+<section id="نمایش-اعداد-حقیقی" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="نمایش-اعداد-حقیقی"><span class="header-section-number">2.11</span> نمایش اعداد حقیقی</h2>
+<p>برای نمایش اعداد حقیقی از یک محور افقی که دارای دو جهت است استفاده می کنیم. ابتدا نقطه ی دلخواه و ثابت واقع بر آن به عنوان مبدأ محور و مکان این نقطه را متناظر با نمایش عدد صفر در نظر می گیریم، اعدادی که در سمت راست مبدأ واقعند، مثبت و اعدادی که در سمت چپ مبدأ واقعند منفی هستند.</p>
+<p>تذکر: برای نمایش اعداد حقیقی لازم نیست حتمأ از یک محور افقی استفاده شود.بلکه می توان از یک محور عمودی نیز استفاده نمود.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../RealNumbers/images/real-numbers.png" title="نمایش اعداد روی محور اعداد حقیقی" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">real-number</figcaption>
+</figure>
+</div>
+</section>
+<section id="مثال-2" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="مثال-2"><span class="header-section-number">2.12</span> مثال</h2>
+<p>مکان <span class="math inline">\(+ \sqrt{2}\)</span> را روی محور اعداد حقیقی مشخص نمایید.</p>
+<p>حل.</p>
+<p>باید نقطه ای که در سمت راست مبدأ و فاصله ی آن تا مبدأ به اندازه ی <span class="math inline">\(\sqrt{2}\)</span> است را بیابیم. بنابر قضیه ی معروف فیثاغورث برای یک مثلث قائم الزاویه با اضلاع به اندازه ی 1 به اندازه ی وتر برابر است با: <span class="math inline">\(.\sqrt{1^{2} + 1^{2}} = \sqrt{2}\)</span></p>
+<p>مثلث قائم الزاویه ی زیر را مطابق شکل بر محور اعداد قرار می دهیم.</p>
+<p><img src="../RealNumbers/images/square-root-of-2.png" title="نمایش $\sqrt{2}$ روی محور مختصات" class="img-fluid" alt="square-root-of-2"> اگر با پرگار دایره ای به مرکز مبدأ و شعاع <span class="math inline">\(OB\)</span> را مطابق با شکل زیر رسم کنیم، این دایره محور اعداد حقیقی را در نقطه ای مانند <span class="math inline">\(P\)</span> قطع می کند. چون <span class="math inline">\(OB\)</span> شعاع دایره است بنابراین <span class="math inline">\(OP = \sqrt{2}\)</span>، پس نقطه ی <span class="math inline">\(P\)</span> مکان <span class="math inline">\(\sqrt{2}\)</span> است.</p>
+</section>
+<section id="اصل-ارشمیدسی-اعداد-حقیقی" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="اصل-ارشمیدسی-اعداد-حقیقی"><span class="header-section-number">2.13</span> اصل ارشمیدسی اعداد حقیقی</h2>
+<p>به ازای هر عدد حقیقی <span class="math inline">\(x\)</span> عددی طبیعی مانند <span class="math inline">\(n_{x}\mathbb{\in N}\)</span> وجود دارد به طوری که <span class="math inline">\(.n_{x} &gt; x\)</span></p>
+<p>تذکر: البته گاهی یک گزاره ی دیگر (خاصیت زیرینه) را به عنوان یک اصل در نظر می گیرند و این گزاره را به عنوان یک لم اثبات می کنند.</p>
+</section>
+<section id="نتیجه" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="نتیجه"><span class="header-section-number">2.14</span> نتیجه</h2>
+<p>به ازای هر عدد حقیقی مثبت <span class="math inline">\(x\)</span> عددی طبیعی مانند <span class="math inline">\(n_{x}\mathbb{\in N}\)</span> وجود دارد به طوری که <span class="math inline">\(.\frac{1}{n_{x}} &lt; x\)</span></p>
+<p>برهان. اصل ارشمیدسی و قضایای نا مساوی ها را به کار ببرید.</p>
+</section>
+<section id="بازه-ها" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="بازه-ها"><span class="header-section-number">2.15</span> بازه ها</h2>
+<p>به ازای دو عدد حقیقی <span class="math inline">\(a,b \in \mathbb{R}\)</span> مجموعه ی همه ی اعداد حقیقی بین <span class="math inline">\(b\)</span> و <span class="math inline">\(a\)</span> را یک بازه یا فاصله می گویند. بر حسب این که نقاط ابتدایی یا انتهایی <span class="math inline">\(b\)</span> و <span class="math inline">\(a\)</span> متعلق به این بازه باشند یا متعلق به بازه نباشند حالت های مختلفی مطرح می شود. برای هر <span class="math inline">\(a,b \in \mathbb{R}\)</span> بازه ها بصورت زیر تعریف می شوند:</p>
+<div dir="ltr">
+<ul>
+<li><p><span class="math inline">\(\lbrack a,b\rbrack = \left\{ x \in \mathbb{R} \middle| a \leq x \leq b \right\}\)</span></p></li>
+<li><p><span class="math inline">\(\left. \left \lbrack a,b \right. \right) = \left\{ x \in \mathbb{R} \middle| a \leq x &lt; b \right\}\)</span></p></li>
+<li><p><span class="math inline">\(\left( a,\left. \ b \right\rbrack \right.\  = \left\{ x \in \mathbb{R} \middle| a \lt x \leq b \right\}\)</span></p></li>
+<li><p><span class="math inline">\((a,b) = \left\{ x \in \mathbb{R} \middle| a \lt x \lt b \right\}\)</span></p></li>
+<li><p><span class="math inline">\((a, + \infty) = \left\{ x \in \mathbb{R} \middle| a &lt; x &lt; + \infty \right\} = \left\{ x \in \mathbb{R} \middle| x &gt; a \right\}\)</span></p></li>
+<li><p><span class="math inline">\(\left\lbrack a,\left. \  + \infty \right) \right.\  = \left\{ x \in \mathbb{R} \middle| a \leq x &lt; + \infty \right\} = \left\{ x \in \mathbb{R} \middle| x \geq a \right\}\)</span></p></li>
+<li><p><span class="math inline">\(( - \infty,b) = \left\{ x \in \mathbb{R} \middle| - \infty \lt x \lt b \right\} = \left\{ x \in \mathbb{R} \middle| x \lt b \right\}\)</span></p></li>
+<li><p><span class="math inline">\(\left( - \infty,\left. \ b \right\rbrack \right.\  = \left\{ x \in \mathbb{R} \middle| - \infty &lt; x \leq b \right\} = \left\{ x \in \mathbb{R} \middle| x \leq b \right\}\)</span></p></li>
+<li><p><span class="math inline">\(( + \infty, + \infty) = \left\{ x \in \mathbb{R} \middle| - \infty \lt x \lt + \infty \right\} = \left\{ x \in \mathbb{R} \middle| \in \mathbb{R} \right\} = \mathbb{R}\)</span></p></li>
+<li><p><span class="math inline">\(\mathbb{R}^{*} = \lbrack - \infty, + \infty\rbrack\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="تذکر" class="level2" data-number="2.16">
+<h2 data-number="2.16" class="anchored" data-anchor-id="تذکر"><span class="header-section-number">2.16</span> تذکر</h2>
+<ul>
+<li><p>با توجه به تعریف بالا برای بازه می توان گفت مجموعه ی تهی و مجموعه ای تک عضوی نیز بازه به حساب می آیند.</p></li>
+<li><p><span class="math inline">\(\mathbb{R}^{*}\)</span> مجموعه ی اعداد حقیقی گسترش یافته است و تنها در سطوح پیشرفته ی ریاضی ممکن است با آن مواجه شوید.</p></li>
+</ul>
+</section>
+<section id="مثال-3" class="level2" data-number="2.17">
+<h2 data-number="2.17" class="anchored" data-anchor-id="مثال-3"><span class="header-section-number">2.17</span> مثال</h2>
+<p>عدد حقیقی نا منفی <span class="math inline">\(a\)</span> مفروض است، اگر به ازای هر عدد حقیقی مثبت <span class="math inline">\(\epsilon\)</span> داشته باشیم <span class="math inline">\(a \lt \epsilon\)</span> ، آن گاه <span class="math inline">\(a = 0\)</span>.</p>
+<p>حل.</p>
+<p>اگر <span class="math inline">\(a &gt; 0\)</span> آن گاه بنا بر نتیجه ی اصل ارشمیدسی عددی طبیعی مانند <span class="math inline">\(n_{a} \in\mathbb{ N}\)</span> وجود دارد به طوری که <span class="math inline">\(.\frac{1}{n_{a}} &lt;div a\)</span> قرار می دهیم <span class="math inline">\(\epsilon = \frac{1}{n_{a}}\)</span>، اما این متناقص با فرض مساله است که می گوید به ازای هر عدد حقیقی مثبت <span class="math inline">\(\epsilon\)</span> داشته باشیم <span class="math inline">\(a \lt 0\)</span>. پس فرض <span class="math inline">\(a \gt 0\)</span> باطل است و بنابراین <span class="math inline">\(a = 0\)</span>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Set/intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">مجموعه</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../references.html" class="pagination-link">
+        <span class="nav-page-text">منابع</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../pages/about.html">درباره ما</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../pages/license.html">License</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

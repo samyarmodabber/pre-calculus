@@ -1,0 +1,89 @@
+project:
+  type: book
+  output-dir: docs
+  preview:
+    port: 4200
+    browser: true
+
+toc: true
+toc-title: فهرست
+
+number-sections: true
+number-depth: 2
+
+bibliography: references.bib
+
+
+book:
+  title: "ریاضیات پیشدانشگاهی (نظریه٬ کاربرد و تمرین)"
+  author: "سامیار"
+  date: "1/06/2024"
+  image: logo.png
+  cover-image: logo.png
+  favicon: logo.pn
+  reader-mode: true
+  
+  search:
+    location: navbar
+    type: overlay
+
+  navbar:
+      pinned: true
+      logo: logo.png
+      right:
+      # - title: "Math"
+      - icon: github
+        href: https://github.com/
+        aria-label: GitHub
+      
+  sidebar:
+    # search: true
+    alignment: right
+    logo: logo.png
+  page-footer:
+    center: 
+      - text: "درباره ما"
+        href: pages/about.qmd
+      - text: "License"
+        href: pages/license.qmd
+  chapters:
+    - index.qmd
+    - part: "نظریه مجموعه ها"
+      chapters:
+        - chapters/Set/intro.md
+    - part: "دستگاه حقیقی"
+      chapters:
+        - chapters/RealNumbers/00real-set.rtl.md
+        # - chapters/RealNumbers/01power.rtl.md
+        # - chapters/RealNumbers/02abs.rtl.md
+        # - chapters/RealNumbers/03log.rtl.md
+        # - chapters/RealNumbers/04step.rtl.md
+    # - part: "تابع"
+    #   chapters:
+    #     - chapters/Functions/intro.rtl.md
+    - references.qmd
+
+# https://github.com/mlr-org/mlr3book/blob/main/book/_quarto.yml
+format:
+  html:
+    theme:
+      light: [flatly , style/custom.scss]
+      dark: [darkly , style/custom.scss]
+    fontsize: "20px"
+    linestretch: 1.6
+    mainfont: "Roboto"
+    monofont: "Fira Mono"
+    smooth-scroll: true
+    toc-depth: 2
+    # code-link: false
+    # code-tools:
+    #   toggle: true
+    # code-fold: false
+    highlight-style: printing
+    # code-block-bg: true
+    # code-overflow: wrap
+    reference-location: margin
+    mermaid:
+      theme: neutral
+
+

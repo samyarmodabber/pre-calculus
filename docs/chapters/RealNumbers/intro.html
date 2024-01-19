@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ریاضیات پیشدانشگاهی (نظریه٬ کاربرد و تمرین) - 2&nbsp; دستگاه حقیقی</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/Functions/intro.html" rel="next">
+<link href="../../chapters/Set/intro.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ریاضیات پیشدانشگاهی (نظریه٬ کاربرد و تمرین)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/RealNumbers/intro.html">دستگاه حقیقی</a></li><li class="breadcrumb-item"><a href="../../chapters/RealNumbers/intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دستگاه حقیقی</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">مقدمه</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">نظریه مجموعه ها</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Set/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نظریه مجموعه ها</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">دستگاه حقیقی</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/RealNumbers/intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دستگاه حقیقی</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">مثلثات</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Functions/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">مثلثات</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">منابع</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">دستگاه حقیقی</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div dir="rtl">
+<section id="مجموعه-ها-ی-اعداد" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="مجموعه-ها-ی-اعداد"><span class="header-section-number">2.1</span> مجموعه ها ی اعداد</h2>
+<p>بعضی مجموعه های اعداد در ریاضیات از اهمیت ویژه ای برخوردارند، به همین دلیل با نامگذاری خاصی این مجموعه ها را از مجموعه های دیگر متمایز می کنیم:</p>
+<p>مجموعه اعداد طبیعی</p>
+<p><span class="math display">\[\mathbb{N} := \left\{ 1,2,3,\ldots \right\}\]</span></p>
+<p>مجموعه ی اعداد شمارشی (حسابی)</p>
+<p><span class="math display">\[\mathbb{W} := \left\{ 0,1,2,3,\ldots \right\}\]</span></p>
+<p>مجموعه ی اعداد صحیح</p>
+<p><span class="math display">\[\mathbb{Z} := \left\{ \ldots, - 2, - 1,0,1,2,\ldots \right\}\]</span></p>
+<p>مجموعه ی اعداد گویا (کسری)</p>
+<p><span class="math display">\[\mathbb{Q} := \left\{ \left. \ \frac{a}{b}\  \right|\ a,b\mathbb{\in Z}\ \&amp;\ b \neq 0 \right\}\]</span></p>
+<p>مجموعه ی اعداد گنگ (اصم)</p>
+<p><span class="math display">\[\mathbb{Q}^{c} := \mathbb{R}\backslash\mathbb{Q} \]</span></p>
+<p>مجموعه ی اعداد حقیقی</p>
+<p><span class="math display">\[\mathbb{R} := \mathbb{Q}^{c} \cup \mathbb{Q}\]</span></p>
+<p>از تعریف مجموعه های بالا واضح است که</p>
+<p><span class="math display">\[\mathbb{N \subset W \subset Z \subset Q \subset R}.\]</span></p>
+<p><span class="math display">\[\mathbb{Q}^{c} \subset \mathbb{R}\]</span></p>
+<blockquote class="blockquote">
+<p>تذکر: مجموعه ی دیگری از اعداد نیز وجود دارد که به اعداد مختلط موسوم است و آن را با نماد <span class="math inline">\(\mathbb{C}\)</span> نمایش می دهند. با این مجموعه در درس های آینده آشنا خواهیم شد و خواهیم دید که <span class="math inline">\(\mathbb{R \subset C}\)</span>.</p>
+</blockquote>
+</section>
+<section id="مجموعه-ی-اعداد-طبیعی" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="مجموعه-ی-اعداد-طبیعی"><span class="header-section-number">2.2</span> مجموعه ی اعداد طبیعی</h2>
+<p>کلمه حقیقی که برای نامیدن اعداد حقیقی به کار می رود، در مقابل کلمه ی موهومی است که گاهی برای نامیدن اعداد مختلط به کار می رود. برای معرفی دستگاه اعداد حقیقی روش های مختلفی وجود دارد.ریاضیدان ایتالیایی جوزف پئانو پنج اصل موضوعه را برای اعداد طبیعی وضع نمود و این خود نقطه شروعی برای ساختن اعداد حقیقی بود.کارل وایر شتراس، ریچارد دد کیند و کانتور بزرگ هر کدام روشی برای ساختن اعداد گنگ از اعداد گویا مطرح کردند. در اینجا با نحوه ی ساختن با نحوه ی ساختن اعداد حقیقی کاری نداریم بلکه اعداد را به عنوان موجودات و اشیا تعریف نشده ی ریاضی در نظر می گیریم که از ویژگی هایی که اصول موضوعه نامیده می شوند پیروی می کنند. در اصول موضوعه زیر از حروف کوچک <span class="math inline">\(a,b,c,\ldots,y,z\)</span> برای نمایش اعداد حقیقی دلخواه استفاده می کنیم.</p>
+<p>فرض کنید متناظر با هر دو عدد طبیعی <span class="math inline">\(bو\ a\)</span> عدد حقیقی دیگری که آن را مجموع <span class="math inline">\(bو\ a\)</span> می نامند و با نماد <span class="math inline">\(a + b\)</span> نمایش می دهند موجود باشد، همچنین فرض کنید حاصل ضرب این دو عدد حقیقی باشد که با نماد <span class="math inline">\(ab\ یا\ a.b\)</span> نمایش داده می شود.مجموعه ی اعداد حقیقی به همراه اعمال جمع و ضرب در اصول موضوعه زیر صدق می کند:</p>
+<ol type="1">
+<li>وجود عضو خنثا</li>
+</ol>
+<p>دو عدد یکتای 0 و 1 موجودند به طوری که به ازای هر عدد حقیقی <span class="math inline">\(,a\)</span></p>
+<p>داریم: <span class="math inline">\(.a.1 = a\)</span> و $ a + 0 = a$</p>
+<ol start="2" type="1">
+<li>وجود عضو قرینه</li>
+</ol>
+<p>به ازای هر عدد حقیقی <span class="math inline">\(،a\)</span> عددی حقیقی مانند <span class="math inline">\(b\)</span> هست به طوری که <span class="math inline">\(a + b = 0\)</span>، عدد <span class="math inline">\(b\)</span> را قرینه (وارونه جمعی عدد<span class="math inline">\(a\)</span> می نامند و آن را با نماد <span class="math inline">\(–a\)</span> نشان می دهند.</p>
+<ol start="3" type="1">
+<li>وجود عضو معکوس</li>
+</ol>
+<p>به ازای هر عدد حقیقی <span class="math inline">\(a \neq 0\)</span> عددی حقیقی مانند<span class="math inline">\(b\)</span>وجود دارد، به طوری که <span class="math inline">\(.a.b = 1\)</span> عدد <span class="math inline">\(b\)</span> را معکوس (وارون ضربی) عدد <span class="math inline">\(a\)</span> می نامیم و آن را با نماد <span class="math inline">\(a^{- 1}\)</span> یا <span class="math inline">\(\frac{1}{a}\)</span> نمایش می دهیم.</p>
+<ol start="4" type="1">
+<li>قانون جابجایی</li>
+</ol>
+<p>به ازای هر دو عدد حقیقی <span class="math inline">\(b\)</span> و <span class="math inline">\(a\)</span> داریم <span class="math inline">\(.ab = ba\)</span> و $ a + b = b + a$</p>
+<ol start="5" type="1">
+<li>قانون شرکت پذیری</li>
+</ol>
+<p>به ازای هر سه عدد حقیقی <span class="math inline">\(c\)</span> و $ b&nbsp;،a$ داریم</p>
+<p><span class="math display">\[a + (b + c) = (a + b) + c$ و $ a(bc) = (ab)c\ \]</span></p>
+<ol start="6" type="1">
+<li>قانون توزیع پذیری</li>
+</ol>
+<p>به ازای هر سه عدد حقیقی <span class="math inline">\(c\)</span> و $ b&nbsp;،a$ داریم</p>
+<p><span class="math display">\[a(b + c) = ab + ac.\]</span></p>
+<section id="گزاره" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="گزاره"><span class="header-section-number">2.2.1</span> گزاره</h3>
+<p>با به کار بردن اصول بالا به راحتی می توان خواص زیر را نتیجه گرفت، اثبات این قانون به عنوان تمرین به دانشجو واگذار می شود.</p>
+<p>الف. هر گاه <span class="math inline">\(a + b = b + c\)</span> آن گاه <span class="math inline">\(.a = b\)</span>همچنین هر گاه <span class="math inline">\(c \neq 0\)</span> و $ ac = bc$ آنگاه <span class="math inline">\(a = b\)</span> این قاعده به قانون حذف معروف است.</p>
+<p>ب.هر گاه <span class="math inline">\(ab = 0\)</span> آن گاه <span class="math inline">\(.b = 0\ یا\ a = 0\)</span></p>
+</section>
+<section id="مثال" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="مثال"><span class="header-section-number">2.2.2</span> مثال</h3>
+<p>اگر <span class="math inline">\(.x^{2} - 1 = 0\ یا\ x = 0\ آنگاه\ x\left( x^{2} - 1 \right) = 0\)</span></p>
+<p>ج. هر گاه <span class="math inline">\(d \neq 0\)</span> و $ b = 0$ آن گاه <span class="math inline">\(.\frac{a}{b}.\frac{c}{d} = \frac{ac}{bd}\)</span></p>
+</section>
+<section id="مثال-1" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="مثال-1"><span class="header-section-number">2.2.3</span> مثال</h3>
+<p>در تساوی <span class="math inline">\(\frac{x}{x^{3} + x + 1}.\frac{x^{2} - 1}{5} = \frac{x(x^{2} - 1)}{5(x^{3} + x + 1)}\)</span> حاصل ضرب دو کسر تبدیل یک کسر شده است، اما در بسیاری از موارد باید عکس این کار را انجام دهیم، یعنی کسر <span class="math inline">\(\frac{x(x^{2} - 1)}{5(x^{3} + x + 1)}\)</span> را به صورت <span class="math inline">\(\frac{x}{x3 + x + 1}.\frac{x^{2} - 1}{5}\)</span> بنویسیم.</p>
+<p>د. هر گاه <span class="math inline">\(d \neq 0\)</span> و $ b = 0$ آن گاه <span class="math inline">\(.\frac{a}{b} + \frac{c}{d} = \frac{ad = bc}{bd}\)</span></p>
+<p>به این کار مخرج مشترک گیری می گوییم، و معمولا دانشجویان با آن مشکلی ندارند،اما در بسیاری از موارد باید عکس این کار را انجام دهیم یعنی کسر <span class="math inline">\(\frac{a + b}{c}\)</span> را باید تفکیک کنیم و به صورت <span class="math inline">\(\frac{a}{c} + \frac{b}{c}\)</span> بنویسیم. بسیار دیده می شود که دانشجویان در عبارتی به شکل <span class="math inline">\(\frac{a + b}{c}\)</span> می گویند می توان <span class="math inline">\(a\)</span> از صورت کسر را با <span class="math inline">\(a \neq 0\)</span> از مخرج کسر ساده کرد. اما مطابق با قاعده ی مخرج مشترک گرفتن <span class="math inline">\(\frac{a + b}{a} = \frac{a}{a} + \frac{b}{a}\)</span> و این نشان می دهد که <span class="math inline">\(a\)</span> هم مخرج <span class="math inline">\(a\)</span> وهم مخرج <span class="math inline">\(b\)</span> است پس نمی توان آن را با <span class="math inline">\(a\)</span> ساده نمود زیرا با این کار مخرج <span class="math inline">\(b\)</span> نیز از بین می رود بدون آنکه <span class="math inline">\(b\)</span> را ساده کرده باشیم. البته اگر در صورت کسر به جای علامت + علامت × داشته باشیم، می توان یک عامل از صورت کسر را با عاملی در مخرج کسر ساده نمود به عبارت دیگر $ = b$به مثال عددی زیر توجه کنید:</p>
+</section>
+<section id="مثال-2" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="مثال-2"><span class="header-section-number">2.2.4</span> مثال</h3>
+<p><span class="math inline">\(\frac{3 + 5}{3} \neq 5\)</span> ، یعنی حق نداریم <em>3</em> در صورت کسر را با <em>3</em> درمخرج کسر ساده کنیم. ولی در عبارت <span class="math inline">\(\frac{3 + 5}{3}\)</span> می توان <em>3</em> در صورت کسر را با <em>3</em> در مخرج کسر ساده نمود و نوشت <span class="math inline">\(.\frac{3 \times 5}{3}\)</span><em>=5</em></p>
+<p>ه هر گاه <span class="math inline">\(ad = bc\ \frac{a}{b} = \frac{c}{d}\)</span> و $ d &nbsp;،b $ به عبارت دیگر در هر تناسب همواره حاصل ضرب طرفین با حاصل با حاصل ضرب وسطین برابر است. در حالت خاص اگر <span class="math inline">\(d = 1\)</span> ، آن گاه از تساوی <span class="math inline">\(\frac{a}{b} = c\)</span> حتما <span class="math inline">\(a = bc\)</span> نتیجه می شود. اگر مخرج یعنی <span class="math inline">\(b\)</span> صفر باشد، در این صورت</p>
+<p><span class="math display">\[a = 0.،\]</span></p>
+<p>که غیر ممکن است مگر آنکه <span class="math inline">\(a = 0\)</span>، اما اگر <span class="math inline">\(a = 0\)</span> تساوی</p>
+<p><span class="math display">\[0 = 0.،\]</span></p>
+<p>را داریم که به ازای هر مقدار <span class="math inline">\(c\)</span> همواره درست است.</p>
+<p>پس اگر <span class="math inline">\(a \neq 0\)</span> تساوی <span class="math inline">\(a = 0.c\)</span> به ازای هیچ مقداری مانند <span class="math inline">\(c\)</span> درست نیست و اگر <span class="math inline">\(a = 0\)</span> تساوی <span class="math inline">\(a = 0.c\)</span> به ازای هر مقداری از <span class="math inline">\(c\)</span> درست است. و بنابراین تساوی <span class="math inline">\(a = 0.c\)</span> یا معدلا تقسیم بر صفر در هر دو صورت بی معنی است.</p>
+<p>و. هرگاه <span class="math inline">\(d \neq 0\)</span> و $ c &nbsp;،b $ آن گاه <span class="math inline">\(.\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}\)</span> این قاعده را دور در دور و نزدیک در نزدیک می نامند، برای مثال</p>
+<p><span class="math display">\[\frac{\frac{x}{x^{2} - 1}}{\frac{5}{x^{2} + 1}} = \frac{x(x^{2} + 1)}{5(x^{2} - 1)}.\]</span></p>
+<p>ز.هر گاه <span class="math inline">\(a^{2} + b^{2} = 0\)</span> آن گاه <span class="math inline">\(.a = 0\)</span> و $ b = 0$</p>
+<blockquote class="blockquote">
+<p>تذکر: از نماد <span class="math inline">\(\infty\)</span> که بی نهایت خوانده می شود بسیار استفاده خواهیم کرد توجه کنید که بی نهایت یک عدد نیست بلکه صرفا نمادی را برای نشان دادن یک مفهوم ریاضی است، این مفهوم که یک عدد حقیقی می تواند از هر اندازه ی قابل تصور باز هم بیشتر و بزرگتر باشد را با نماد <span class="math inline">\(\infty\)</span> نشان می دهیم. از آن جایی که <span class="math inline">\(\infty\)</span> نمادی برای بیان یک مفهوم ریاضی است پس هرگز نمی توان آن را در محاسبات مانند اعداد به کاربرد و نوشت <span class="math inline">\(\infty - \infty = 0\)</span> یا <span class="math inline">\(.\frac{\infty}{\infty}\)</span></p>
+</blockquote>
+<p>برای مثال اگر از بی نهایت عدد طبیعی بی نهایت عدد فرد کنار گذاشته شود، همچنان بی نهایت عدد زوج باقی خواهد ماند.</p>
+<p>خاصیت ترتیب اعداد حقیقی که یک سرمایه ی بزرگ و ذاتی آنها است ریشه ی بسیاری از مفاهیم کاربردی این اعداد به شمار می رود. اگر بخواهیم مفهوم ترتیب را به مجموعه ی اعداد حقیقی القاء نماییم، لازم است مفاهیم مثبت و منفی بودن اعداد را مطرح نماییم. برای این که با بعضی مفاهیم محض و بنیادین درگیر نشویم، مفهوم مثبت بودن را به عنوان یک مفهوم تعریف نشده ی ریاضی می پذیریم.مجموعه ی اعداد حقیقی مثبت را با نماد <span class="math inline">\(\mathbb{R}^{+}\)</span> و مجموعه ی همه ی اعداد حقیقی منفی را با نماد <span class="math inline">\(\mathbb{R}^{-}\)</span> نشان می دهیم. <span class="math inline">\(\mathbb{R}^{+}\)</span> با سه اصل موضوعه زیر مشخص می شود:</p>
+<p>الف. <span class="math inline">\(.0 \neq \mathbb{R}^{+}\)</span></p>
+<p>ب .به ازای هر عدد حقیقی ناصفر <span class="math inline">\(a\)</span> یا <span class="math inline">\(a \in \mathbb{R}^{+}\)</span> یا <span class="math inline">\(- a \in \mathbb{R}^{+}\)</span>.(مقصود از حرف ربط یا، همان یا در زبان فارسی است. که با حرف ربط یا در زبان ریاضی( در منطق دوارزشی) کمی متفاوت است.)</p>
+<p>ج. حاصل جمع و ضرب هر دو عدد حقیقی مثبت مجددا یک عدد حقیقی مثبت خواهد بود، به اصطلاح ریاضی مجموعه ی <span class="math inline">\(\mathbb{R}^{+}\)</span> نسبت به اعمال جمع و ضرب بسته است.</p>
+<p>از این سه اصل موضوعه، مفاهیم کوچکتری و بزرگتری متولد می شوند:</p>
+<ul>
+<li><p>می گوییم $a$ کوچکتر از <span class="math inline">\(b\)</span> است و می نویسیم <span class="math inline">\(a &lt; b\)</span>، هر گاه <span class="math inline">\(b - a\)</span> مثبت باشد.</p></li>
+<li><p>می گوییم <span class="math inline">\(\ a\)</span> بزرگتر از <span class="math inline">\(b\)</span> است و مینویسیم <span class="math inline">\(a &gt; b\)</span>، هر گاه <span class="math inline">\(a - b\)</span> مثبت باشد.</p></li>
+</ul>
+<p>پس اگر <span class="math inline">\(a &gt; 0\)</span> آن گاه <span class="math inline">\(a\)</span> مثبت است، و اگر <span class="math inline">\(0 &gt; a\)</span> آن گاه <span class="math inline">\(a\)</span> مثبت نیست. اگر<span class="math inline">\(a\)</span> عددی مثبت نباشد آن را منفی می نامیم.</p>
+<p>همچنین مفاهیم “کوچکتر یامساوی با” و”بزرگتر یا مساوی با” را می توان به صورت زیر تعریف کرد:</p>
+<ul>
+<li><p>می گوییم <span class="math inline">\(a\)</span> کوچکتر یا مساوی با <span class="math inline">\(b\)</span> است و می نویسیم <span class="math inline">\(،a \leq b\)</span> هر گاه <span class="math inline">\(a &lt; b\)</span> یا <span class="math inline">\(a = b\)</span> باشد.</p></li>
+<li><p>می گوییم <span class="math inline">\(a\)</span> بزرگتر یا مساوی با <span class="math inline">\(b\)</span> است و می نویسیم <span class="math inline">\(،a \geq b\)</span> هر گاه <span class="math inline">\(a &gt; b\)</span> یا <span class="math inline">\(a = b\)</span> باشد.</p></li>
+</ul>
+<p>حال با استفاده از اصول موضوعه ی بالا و مفاهیم کوچکتری و بزرگتری می توان قضایای مهمی را نتیجه گرفت، که یکی از مهم ترین آنها قانون تثلیت است:</p>
+<p>قانون تثلیت</p>
+<p>به ازای هر دو عدد حقیقی <span class="math inline">\(a\)</span> و $ b$ یکی و تنها یکی از سه رابطه ی زیر درست است:</p>
+<p>الف. <span class="math inline">\(.a &gt; b\)</span></p>
+<p>ب. <span class="math inline">\(.a &lt; b\)</span></p>
+<p>ج. <span class="math inline">\(.a = b\)</span></p>
+<p>از جمله قوانین دیگر نامساوی ها که از اصول موضوعه بالا نتیجه می شود می توان به قوانین زیر اشاره کرد:</p>
+<p>الف. هر گاه <span class="math inline">\(b &lt; c\)</span> و $ a &lt; b$ آن گاه می توان نتیجه گرفت <span class="math inline">\(.a &lt; c\)</span> این مطلب به قانون قیاس معروف است.</p>
+<p>ب. به طرفین یک نامساوی میتوان یک عدد ثابت مانند <span class="math inline">\(c\)</span> را اضافه نمود، همچنین از طرفین یک نامساوی می توان یک عدد ثابت مانند <span class="math inline">\(c\)</span> را کم کرد.</p>
+<p>ج. اگر طرفین یک نامساوی را در عددی مثبت مانند <span class="math inline">\(C &gt; 0\)</span> ضرب کنیم، جهت نامساوی عوض نمی شود به عبارت دیگر هرگاه <span class="math inline">\(.ac &gt; bc\ گاه\ آن\ ،C &gt; 0\)</span> و $ a &gt; b$</p>
+<p>د. اگر طرفین یک نامساوی را در عددی منفی مانند <span class="math inline">\(C &lt; 0\)</span> ضرب کنیم، جهت نامساوی عوض می شود به عبارت دیگر هرگاه <span class="math inline">\(.ac &lt; bc\ گاه\ آن\ ،C &lt; 0\)</span> و $ a &gt; b$</p>
+<p>ه. اگر طرفین یک نامساوی را بر عددی مثبت مانند <span class="math inline">\(C &gt; 0\)</span> تقسیم نماییم جهت نامساوی عوض نمی شود به عبارت دیگر هرگاه <span class="math inline">\(.\frac{a}{c} &gt; \frac{b}{c}\ گاه\ آن\ ،C &gt; 0\)</span> و $ a &gt; b$</p>
+<p>و. اگر طرفین یک نامساوی را بر عددی منفی مانند <span class="math inline">\(C &lt; 0\)</span> تقسیم نماییم، جهت نامساوی عوض می شود به عبارت دیگر هرگاه <span class="math inline">\(.\frac{a}{c} &lt; \frac{b}{c}\ گاه\ آن\ ،C &lt; 0\)</span> و $ a &gt; b$</p>
+<p>ز. اگر طرفین یک نامساوی هم علامت باشند و جای صورت و مخرج را با هم عوض کنیم یعنی طرفین را معکوس نماییم، جهت نامساوی عوض می شود به عبارت دیگر هر گاه <span class="math inline">\(\frac{a}{b} &lt; \frac{c}{d}\)</span> و این دو کسر هم علامت باشند، یعنی <span class="math inline">\(\frac{a}{b} &gt; 0\)</span> و $ &gt; 0$ یا این که <span class="math inline">\(\frac{a}{b} &lt; 0\)</span> و $ &lt; 0$ آن گاه <span class="math inline">\(\frac{b}{a} &gt; \frac{d}{c}\)</span>.</p>
+<p>نمایش اعداد حقیقی. برای نمایش اعداد حقیقی از یک محور افقی که دارای دو جهت است استفاده می کنیم. ابتدا نقطه ی دلخواه و ثابت واقع بر آن به عنوان مبدأ محور و مکان این نقطه را متناظر با نمایش عدد صفر در نظر می گیریم، اعدادی که در سمت راست مبدأ واقعند، مثبت و اعدادی که در سمت چپ مبدأ واقعند منفی هستند.</p>
+<p>تذکر: برای نمایش اعداد حقیقی لازم نیست حتمأ از یک محور افقی استفاده شود.بلکه می توان از یک محور عمودی نیز استفاده نمود.</p>
+<p>-3 -2 -1 0 +1 +2 +3</p>
+<p>شکل 2.نمایش اعداد روی محور اعداد حقیقی.</p>
+<p>مثال 26. مکان <span class="math inline">\(+ \sqrt{2}\)</span> را روی محور اعداد حقیقی مشخص نمایید.</p>
+<p>حل. باید نقطه ای که در سمت راست مبدأ و فاصله ی آن تا مبدأ به اندازه ی <span class="math inline">\(\sqrt{2}\)</span> است را بیابیم. بنابر قضیه ی معروف فیثاغورث برای یک مثلث قائم الزاویه با اضلاع به اندازه ی 1 به اندازه ی وتر برابر است با: <span class="math inline">\(.\sqrt{1^{2} + 1^{2}} = \sqrt{2}\)</span> مثلث قائم الزاویه ی زیر را مطابق شکل بر محور اعداد قرار می دهیم.</p>
+<p>شکل 3. نمایش <span class="math inline">\(\sqrt{2}\)</span> روی محور مختصات</p>
+<p>اگر با پرگار دایره ای به مرکز مبدأ و شعاع <span class="math inline">\(OA\)</span> را مطابق با شکل زیر رسم کنیم، این دایره محور اعداد حقیقی را در نقطه ای مانند $C$ قطع می کند. چون <span class="math inline">\(OC\)</span> شعاع دایره است بنابراین <span class="math inline">\(OC = \sqrt{2}\)</span>، پس نقطه ی <span class="math inline">\(C\)</span> مکان <span class="math inline">\(\sqrt{2}\)</span> است.</p>
+<p>اصل ارشمیدسی اعداد حقیقی. به ازای هر عدد حقیقی <span class="math inline">\(x\)</span> عددی طبیعی مانند <span class="math inline">\(n_{x}\mathbb{\in N}\)</span> وجود دارد به طوری که <span class="math inline">\(.n_{x} &gt; x\)</span></p>
+<p>تذکر: البته گاهی یک گزاره ی دیگر (خاصیت زیرینه) را به عنوان یک اصل در نظر می گیرند و این گزاره را به عنوان یک لم اثبات می کنند.</p>
+<p>نتیجه. به ازای هر عدد حقیقی مثبت <span class="math inline">\(x\)</span> عددی طبیعی مانند <span class="math inline">\(n_{x}\mathbb{\in N}\)</span> وجود دارد به طوری که <span class="math inline">\(.\frac{1}{n_{x}} &lt; x\)</span></p>
+<p>برهان. اصل ارشمیدسی و قضایای نا مساوی ها را به کار ببرید.</p>
+</section>
+</section>
+<section id="بازه-ها" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="بازه-ها"><span class="header-section-number">2.3</span> بازه ها</h2>
+<p>در منطق دو ارزشی( نه منطق فازی) گزاره، جمله ای است خبری، که یا درست است یا نادرست. خواه درستی یا نادرستی آن برای ما معلوم باشد، خواه درستی یا نادرستی آن برای ما مشخص نباشد. معمولا از نماد های <span class="math inline">\(\ldots و\ ،r\ ،q\ ،p\)</span> برای نامگذاری گزاره ها استفاده می کنیم. گزاره نما، گزاره ای است شامل متغییر$&nbsp;x$ که ممکن است به ازای بعضی مقادیر <span class="math inline">\(x\)</span> درست باشد و به ازای بعضی مقادیر <span class="math inline">\(x\)</span> نادرست باشد. معمولا یک گزاره نما را با نمادی مانند <span class="math inline">\(p(x)\)</span> نشان می دهیم. مجموعه ی همه ی عناصری از مجموعه ی <span class="math inline">\(A\)</span> که گزاره نمای <span class="math inline">\(p(x)\)</span> را به یک گزاره ی درست تبدیل می کنند به صورت زیر می نویسیم:</p>
+<p><span class="math display">\[\left\{ x \in A \middle| p(x) \right\},\]</span></p>
+<p>و آن را می خوانیم “مجموعه ی تمام <span class="math inline">\(x\)</span> های عضو <span class="math inline">\(A\)</span> به قسمی که دارای خاصیت <span class="math inline">\(p(x)\)</span> باشند”. برای مثال مجموعه ی <span class="math inline">\(S = \left\{ 2,3,4,5,6,7,8 \right\}\)</span> را می توان به صورت نمادین <span class="math inline">\(S = \left\{ x\mathbb{\in N} \middle| 2 \leq x \leq 8 \right\}\)</span> نوشت. برای مشخص مردن زیر مجموعه ای از اعداد حقیقی که دارای خاصیت مشترکی باشند می توان از این نمادگزاری استفاده کرد.</p>
+<p>به ازای دو عدد حقیقی <span class="math inline">\(a,b\mathbb{\in R}\)</span> مجموعه ی همه ی اعداد حقیقی بین $b$ و $ a$ را یک بازه یا فاصله می گویند. بر حسب این که نقاط ابتدایی یا انتهایی $b$ و $ a$ متعلق به این بازه باشند یا متعلق به بازه نباشند حالت های مختلفی مطرح می شود. در ریاضیات بازه ها زیاد مورد استفاده قرار می گیرند، بنابراین نمادگذاری های زیر را برای این زیر مجموعه های خاص از اعداد حقیقی معرفی می کنیم:</p>
+<p><span class="math display">\[\forall a,b\mathbb{\in R},\]</span></p>
+<p><span class="math inline">\(\lbrack a,b\rbrack = \left\{ x\mathbb{\in R} \middle| a \leq x \leq b \right\}\)</span>(الف</p>
+<p><span class="math inline">\(\left. \ \left\lbrack a,b \right.\  \right) = \left\{ x\mathbb{\in R} \middle| a \leq x &lt; b \right\}\)</span> (ب</p>
+<p><span class="math inline">\(\left( a,\left. \ b \right\rbrack \right.\  = \left\{ x\mathbb{\in R} \middle| a &lt; x \leq b \right\}\)</span> (ج</p>
+<p><span class="math inline">\((a,b) = \left\{ x\mathbb{\in R} \middle| a &lt; x &lt; b \right\}\)</span> (د</p>
+<p><span class="math inline">\((a, + \infty) = \left\{ x\mathbb{\in R} \middle| a &lt; x &lt; + \infty \right\} = \left\{ x\mathbb{\in R} \middle| x &gt; a \right\}\)</span> (ه</p>
+<p><span class="math inline">\(\left\lbrack a,\left. \  + \infty \right) \right.\  = \left\{ x\mathbb{\in R} \middle| a \leq x &lt; + \infty \right\} = \left\{ x\mathbb{\in R} \middle| x \geq a \right\}\)</span> (و</p>
+<p><span class="math inline">\(( - \infty,b) = \left\{ x\mathbb{\in R} \middle| - \infty &lt; x &lt; b \right\} = \left\{ x\mathbb{\in R} \middle| x &lt; b \right\}\)</span> (ز</p>
+<p><span class="math inline">\(\left( - \infty,\left. \ b \right\rbrack \right.\  = \left\{ x\mathbb{\in R} \middle| - \infty &lt; x \leq b \right\} = \left\{ x\mathbb{\in R} \middle| x \leq b \right\}\)</span> (ح</p>
+<p><span class="math inline">\(( + \infty, + \infty) = \left\{ x\mathbb{\in R} \middle| - \infty &lt; x &lt; + \infty \right\} = \left\{ x\mathbb{\in R} \middle| \mathbb{\in R} \right\} = \mathbb{R}\)</span> (ط</p>
+<p><span class="math inline">\(\mathbb{R}^{*} = \lbrack - \infty, + \infty\rbrack\)</span> (ی</p>
+<p>تذکر:دقت نمایید با توجه به تعریف بالا برای بازه می توان گفت مجموعه ی تهی و مجموعه ای تک عضوی نیز بازه به حساب می آیند. همچنین <span class="math inline">\(\mathbb{R}^{*}\)</span> مجموعه ی اعداد حقیقی گسترش یافته است و تنها در سطوح پیشرفته ی ریاضی ممکن است با آن مواجه شوید.</p>
+<blockquote class="blockquote">
+<p>عدد حقیقی نا منفی <span class="math inline">\(a\)</span> مفروض است، اگر به ازای هر عدد حقیقی مثبت <span class="math inline">\(\mathcal{E}\)</span> داشته باشیم <span class="math inline">\(a &lt; \mathcal{E}\)</span>، آن گاه <span class="math inline">\(a = 0\)</span>.</p>
+<p>حل. اگر <span class="math inline">\(a &gt; 0\)</span> آن گاه بنا بر نتیجه ی اصل ارشمیدسی عددی طبیعی مانند <span class="math inline">\(n_{a}\mathbb{\in N}\)</span> وجود دارد به طوری که <span class="math inline">\(.\frac{1}{n_{a}} &lt; a\)</span> قرار می دهیم <span class="math inline">\(\mathcal{E} = \frac{1}{n_{a}}\)</span>، اما این متناقص با فرض مساله است که می گوید به ازای هر عدد حقیقی مثبت <span class="math inline">\(\mathcal{E}\)</span> داشته باشیم <span class="math inline">\(a &lt; 0\)</span>. پس فرض <span class="math inline">\(a &gt; 0\)</span> باطل است و بنابراین <span class="math inline">\(a = 0\)</span>.</p>
+</blockquote>
+</section>
+<section id="توان-و-رادیکال" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="توان-و-رادیکال"><span class="header-section-number">2.4</span> توان و رادیکال</h2>
+<blockquote class="blockquote">
+<p>هر گاه عدد حقیقی <span class="math inline">\(a\)</span> ، <span class="math inline">\(n\)</span> بار در خودش ضرب شود، برای سهولت در نوشتار از نمادی به صورت <span class="math inline">\(a^{n}\)</span> برای نمایش آن استفاده می کنند، به عبارت دیگر</p>
+<p>$\left{ &nbsp;</p>
+<span class="math display">\[\begin{matrix} a^{1} = a \\ a^{n}\underset{بار\ n}{= \overset{a \times a \times \ldots \times a}{︸}\ \ \ n &gt; 1} \\ \  \\ \end{matrix}\]</span>
+<p>.$</p>
+</blockquote>
+<p>عدد <span class="math inline">\(a\)</span> را پایه و عدد <span class="math inline">\(n\)</span> را نما (توان) می نامند.</p>
+<p>قوانین نماها. فرض کنید <span class="math inline">\(b\)</span> و $ a$ دو عدد حقیقی باشند، همچنین $n$ و $ m$ و عدد شمارشی باشند، در این صورت می توان نشان داد</p>
+<p><span class="math inline">\(a^{0} = 1\ ;\ (a \neq 0).\)</span>(الف</p>
+<p><span class="math inline">\(a^{m}.a^{n} = a^{m + n}.\)</span>(ب</p>
+<p><span class="math inline">\(\frac{a^{m}}{a^{n}} = a^{m - n}\ \ یا\ \ a^{m} \div a^{n} = a^{m - n.}\)</span>(ج</p>
+<p><span class="math inline">\(a^{n}.b^{n} = (a.b)^{n.}\)</span>(د</p>
+<p><span class="math inline">\(\frac{a^{n}}{b^{n}} = \left( \frac{a}{b} \right)^{n}\ ;\ (b \neq 0)\ \ یا\ \ a^{n} \div b^{n} = (a \div b)^{n}\ ;\ (b \div 0).\)</span>(ه</p>
+<p><span class="math inline">\(\left( a^{m} \right)^{n} = a^{m.n}.\)</span>(و</p>
+<p><span class="math inline">\(a^{n} = \frac{1}{a^{- n}}\ \ یا\ \ \frac{1}{a^{n}} = a^{- n}\ \ (a \neq 0).\)</span>(ز</p>
+<p>تذکر: در انجام محاسبات به صورت زیر خواهد بود:</p>
+<p>الف. ابتدا انجام عملیاتی که داخل پرانتز نوشته نوشته شده است. اگر دو یا چند پرانتز تودرتو داشته باشیم، محاسبه از داخلی ترین پرانتز به سمت بیرون انجام می گیرد.</p>
+<p>ب. به توان رساندن یک عبارت.</p>
+<p>ج. ضرب و تقسیم.</p>
+<p>د. جمع و تعریف.</p>
+<p>در اولویت های یکسان مانند ضرب و تقسیم یا جمع و تفریق اولویت با انجام دادن آن عملیاتی است که سمت چپ عملیات دیگر واقع است. به عبارت دیگر اولویت با عملی است است که زودتر به آن می رسیم.</p>
+</section>
+<section id="ریشه-و-توان-های-گویا" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="ریشه-و-توان-های-گویا"><span class="header-section-number">2.5</span> ریشه و توان های گویا</h2>
+<p>در بحث بالا، یک عدد شمارشی به عنوان توان معرفی شد، اما توان های کسری (گویا) را نیز می توان تعریف کرد. یعنی توان <span class="math inline">\(a^{\frac{1}{2}}\)</span> را تعریف نمود. اگر <span class="math inline">\(a \geq 0\)</span> آن گاه عددی مانند <span class="math inline">\(x\)</span> که توان دوم آن برابر با <span class="math inline">\(a\)</span> شود را ریشه ی دوم عدد <span class="math inline">\(a\)</span> می نامیم وآن را با نماد <span class="math inline">\(a^{\frac{1}{2}}\)</span> نشان می دهیم. به عبارت دیگر <span class="math inline">\(x = a^{\frac{1}{2}}\)</span> اگر و تنها اگر <span class="math inline">\(x^{2} = a\)</span>. اما از آنجا که هر عدد حقیقی را به توان دو برسانیم حاصل عددی نامنفی می شود، پس در مجموعه ی اعداد حقیقی برای اعداد منفی ریشه دوم تعریف نمی شود.</p>
+<p>الف.هر گاه <span class="math inline">\(n\)</span> یک عدد فرد و مثبت باشد، آن گاه به ازای هرعدد حقیقی مانند <span class="math inline">\(a\)</span>، تنها یک عدد حقیقی مانند <span class="math inline">\(a\)</span> وجود دارد به طوری که <span class="math inline">\(x^{n} = a\)</span> این عدد <span class="math inline">\(x\)</span> را ریشه <span class="math inline">\(n\)</span>ام <span class="math inline">\(a\)</span> می نامیم و آن را با نماد <span class="math inline">\(\sqrtn{a}\)</span> یا <span class="math inline">\(a^{\frac{1}{2}}\)</span> نشان می دهیم. به عبارت دیگر</p>
+<p><span class="math inline">\(x = \sqrtn{a} \Longleftrightarrow x^{n} = a\)</span>.</p>
+<p>ب. هر گاه <span class="math inline">\(n\)</span> یک عدد زوج و مثبت باشد، آن گاه به ازای هر عدد حقیقی منفی مانند <span class="math inline">\(a\)</span> هیچ عدد حقیقی مانند <span class="math inline">\(x\)</span> وجود ندارد به طوری که <span class="math inline">\(x^{n} = a\)</span>، زیرا اگر هر عدد حقیقی دلخواه <span class="math inline">\(x\)</span> را به توان یک عدد زوج مانند <span class="math inline">\(n\)</span> برسانیم حاصل نامنفی خواهد بود، به عبارت دیگر برای <span class="math inline">\(n\)</span> های زوج <span class="math inline">\(x^{n} \geq 0\)</span>، اما به ازای هر عدد حقیقی نامنفی مانند <span class="math inline">\(a\)</span>، یک عدد حقیقی نامنفی مانند <span class="math inline">\(x\)</span> وجود دارد به طوری که <span class="math inline">\({( - x)}^{n} = a\)</span> و $ x^{n} = a$ این اعداد را ریشه های <span class="math inline">\(n\)</span>ام <span class="math inline">\(a\)</span> می نامیم.در این حالت <span class="math inline">\(x\)</span> را ریشه ی نامنفی <span class="math inline">\(a\)</span> می نامیم و آن را با نماد <span class="math inline">\(\sqrtn{a}\)</span> یا <span class="math inline">\(a^{\frac{1}{2}}\)</span> نشان می دهیم. دقت کنید نمادهای <span class="math inline">\(\sqrtn{a}\)</span> یا <span class="math inline">\(a^{\frac{1}{2}}\)</span> فقط برای نشان دادن ریشه ی <span class="math inline">\(n\)</span>ام نامنفی <span class="math inline">\(x\)</span> به کار می رود.</p>
+<p>ج. هر گاه <span class="math inline">\(r = \frac{m}{n}\)</span> یک عدد گویا باشد، و <span class="math inline">\(a\)</span> یک عدد حقیقی مثبت باشد، آن گاه <span class="math inline">\(a^{r}\)</span> را برابر با ریشه <span class="math inline">\(n\)</span>ام <span class="math inline">\(a^{m}\)</span> تعریف می کنیم و آن را با نماد <span class="math inline">\(\sqrtn{a^{m}}\)</span> نشان می دهیم. به سخن دیگر <span class="math inline">\(\sqrtn{a^{m}} = {(a^{m})}^{\frac{1}{2}}\)</span>. و اگر <span class="math inline">\(a \neq 0\)</span> باشد، آن گاه <span class="math inline">\(a^{- r}\)</span> را برابر با <span class="math inline">\(\frac{1}{a^{r}}\)</span> تعریف می کنیم. در این تعریف می بینید، <span class="math inline">\(\sqrtn{a^{m}}\)</span> برابر با <span class="math inline">\(a^{\frac{m}{n}}\)</span> است. پس توان <span class="math inline">\(m\)</span> را می شود با فرجه ی <span class="math inline">\(n\)</span> ساده نمود. اما دقت کنید فرجه <span class="math inline">\(n\)</span> مربوط به کل عبارت زیر رادیکال است، پس فرجه را نمی توان با توان بخشی از عبارت زیررادیکال ساده نمود.</p>
+<p>برای مثال در حالت کلی</p>
+<p><span class="math display">\[\sqrt2{a^{2} + b} \neq a + \sqrt2{b},\]</span></p>
+<p>توان دو در $a^{2}$ را نمی توان با فرجه ی رادیکال که هم متعلق به <span class="math inline">\(a^{2}\)</span> را نمی توان با فرجه ی رادیکال که هم متعلق به <span class="math inline">\(b\)</span> است،ساده کرد. همچنین</p>
+<p><span class="math display">\[\sqrt2{a^{2} + b^{2}} \neq a + b,\]</span></p>
+<p>دقت کنید که فرجه را فقط با توان کل عبارت زیر رادیکال می توانید ساده کنید. در عبارت بالا توان <span class="math inline">\(a^{2}\)</span> برابر با دو است، توان <span class="math inline">\(b^{2}\)</span> نیز برابر دو است، اما توان کل عبارت زیر رادیکال برابر با یک است زیرا <span class="math inline">\(a^{2} + b^{2} = {(a^{2} + b^{2})}^{1}\)</span>.</p>
+<p>می توان ثابت کرد که هیچ عدد گویایی مانند <span class="math inline">\(x\)</span> وجود ندارد که در معادله <span class="math inline">\(x^{2} = 2\)</span> صدق نماید. به مثال زیر توجه کنید:</p>
+<p><strong>مثال 28. نشان دهید</strong> <span class="math inline">\(\sqrt{\mathbf{2}}\)</span> <strong>عددی گویا نیست.</strong></p>
+<p>اثبات. فرض می کنیم (فرض خلف) که <span class="math inline">\(\sqrt{2 \in Q}\)</span> پس <span class="math inline">\(\sqrt{2}\)</span> را می توان به صورت کسری که صورت و مخرج آن نسبت به هم اولند نوشت:</p>
+<p><span class="math display">\[\sqrt{2} = \frac{a}{b};(a,b)\overset{*}{\overbrace{=}}1 \Longrightarrow 2 = \frac{a^{2}}{b^{2}} \Rightarrow a^{2} = 2b^{2} \Rightarrow است\ زوج\ عددی\ a^{2} = 2k,k\mathbb{\in Z}\]</span></p>
+<p>دقت کنید که اگر توان دوم عددی زوج باشد می توان نتیجه گرفت که آن عدد زوج بوده است، زیرا اگر یک عدد فرد به توان دو برسد حاصل عددی فرد خواهد بود، ملاحظه کنید</p>
+<p><span class="math display">\[a = 2k + 1 \Rightarrow a^{2} = (2k + 1)^{2} = 4k^{2} + 4k + 1\]</span></p>
+<p><span class="math inline">\(\  = 2\underset{k^{'}}{\overset{\left( 2k^{2} + k \right)}{︸}} + 1\)</span></p>
+<p><span class="math inline">\(= 2k^{'} + 1.\)</span></p>
+<p>بنابراین داریم</p>
+<p><span class="math display">\[a = 2m;\ \ m\mathbb{\in Z}\overset{**}{\overbrace{\Rightarrow}}\left. \ 2 \right|a\ \ (I)\]</span></p>
+<p>بنا بر مطالب فوق داریم</p>
+<p><span class="math display">\[\left\{ \begin{matrix}
+a = 2m \\
+a^{2} = 2b^{2} \\
+\end{matrix} \right.\ \  \Rightarrow 4m^{2 =}2b^{2} \Rightarrow b^{2} = 2m^{2} \Rightarrow b = 2n \Rightarrow \left. \ 2 \right|b\ \ \ (II)\]</span></p>
+<p><span class="math inline">\((I)\)</span> و <span class="math inline">\((II)\)</span> بیانگر آنند که <span class="math inline">\(2\)</span> نیز مقسوم علیه مشترک <span class="math inline">\(b\)</span> و $ a$ است اما این متنافض با این مطلب است که فرض کرده ایم <span class="math inline">\(\sqrt{2\ }\ لذا\ ،(a,b) = 1\)</span> را نمی توان به صورت یک کسر نوشت، پس <span class="math inline">\(\sqrt{2}\)</span> عددی گویا نیست.</p>
+<p>* دقت کنید <span class="math inline">\((a,b) = 1\)</span> یعنی این که بزرگترین عددی که هم <span class="math inline">\(a\)</span> و هم <span class="math inline">\(b\)</span> بر آن بخش پذیرند، عدد یک است.</p>
+<p>** دقت کنید <span class="math inline">\(\left. \ 2 \right|a\)</span> یعنی که عدد <span class="math inline">\(a\)</span> بر دو بخش پذیر است.</p>
+<p>از مثال بالا می توان فهمید که هیچ عدد گویایی مانند <span class="math inline">\(x\)</span> وجود ندارد که در معادله <span class="math inline">\(x^{2} = 2\)</span> صدق نماید. این که <span class="math inline">\(x\)</span> در معادله ی بالا عددی گویا نیست این سوال را در ذهن ایجاد می کند که اگر <span class="math inline">\(x\)</span> گویا نیست پس <span class="math inline">\(x\)</span> چه عددی می تواند باشد؟ پاسخ به این سوال قیثاغورثیان را که اعداد را مقدس می دانستند با یک مشکل بزرگ اعتقادی مواجه ساخت به طوری که تا سال های طولانی از طرح این سوال در محافل عمومی اجتناب می کردند.</p>
+<p>قوانین عبارتهای توان دار را می توان به صورت زیر تعمیم داد:</p>
+<p>اگر <span class="math inline">\(b\)</span> و $ &nbsp;a$ دو عدد حقیقی مثبت باشند، همچنین <span class="math inline">\(s\)</span> و $ r$ دو عدد گویا باشند، در این صورت</p>
+<p><span class="math display">\[a^{r}.a^{s} = a^{r + s}\]</span></p>
+<p><span class="math display">\[\frac{a^{r}}{a^{s}} = a^{r - s}\ \ یا\ \ \ a^{r} \div a^{s} = a^{r - s}\]</span></p>
+<p><span class="math display">\[a^{r}.b^{r} = (a.b)^{r}\]</span></p>
+<p><span class="math display">\[\frac{a^{r}}{a^{r}} = \left( \frac{a}{b} \right)^{r}\ \ یا\ \ a^{r} \div b^{r} = (a \div b)^{r}\]</span></p>
+<p><span class="math display">\[\left( a^{r} \right)^{s} = a^{r.s}.\]</span></p>
+<p><span class="math display">\[a^{r} = \frac{1}{a^{- r}}\ \ یا\ \ \frac{1}{a^{r}} = a^{- r}\]</span></p>
+</section>
+<section id="لگاریتم" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="لگاریتم"><span class="header-section-number">2.6</span> لگاریتم</h2>
+<p>لگاریتم را می توان به کمک مفهوم اعداد توان دار تعریف نمود. در حالت کلی، هر گاه <span class="math inline">\(a \neq 0\)</span> عددی مثبت باشد و <span class="math inline">\(a^{x = y}\)</span> آن گاه <span class="math inline">\(x\)</span> را لگاریتم عدد <span class="math inline">\(y\)</span> در پایه ی <span class="math inline">\(a\)</span> می گوییم و آن را با نماد <span class="math inline">\(\log_{a}^{y}\)</span> نمایش می دهیم.عدد <span class="math inline">\(y\)</span> را آرگومان لگاریتم و عدد <span class="math inline">\(a\)</span> بر پایه ی (مبنای) لگاریتم می نامیم. در حقیقت</p>
+<p><span class="math display">\[\log_{a}^{y} = x \Leftrightarrow a^{x} = y.\]</span></p>
+<p>چون لگاریتم به کمک اعداد توان دار تعریف شده است، برای بدست آوردن مقدار <span class="math inline">\(\log_{2}^{\sqrt{2}}\)</span>، باید از خود این سوال را پرسید که <span class="math inline">\(2^{?} = \sqrt{2}\)</span> با توجه به آن چه پیش تر در بحث توان گفته شد، <span class="math inline">\(2^{\frac{1}{2}} = \sqrt{2}\)</span> پس می توان گفت: <span class="math inline">\(\log_{2}^{\sqrt{2}} = \frac{1}{2}\)</span>.</p>
+<p>تذکر: همان طور که در تعریف لگاریتم ملاحظه می کنید. پایه ی لگاریتم <span class="math inline">\(a \neq 0\)</span> عددی مثبت در نظر گرفته شده است.</p>
+<p>چون <span class="math inline">\(y = a^{x} &gt; 0\)</span> ، پس در <span class="math inline">\(\log_{a}^{y}\)</span> آرگومان لگاریتم یعنی <span class="math inline">\(y\)</span> باید مثبت باشد. به عبارت دیگر لگاریتم برای اعداد حقیقی منفی و صفر تعریف نمی شود.</p>
+<p>هرگاه در تساوی <span class="math inline">\(\log_{a}^{y} = x\)</span> به جای <span class="math inline">\(y\)</span> مقدار معادل آن یعنی <span class="math inline">\(a^{x}\)</span> را بگذاریم، خواهیم داشت <span class="math inline">\(\log_{a}^{a^{x}} = x\)</span><em>.</em> مشابها، اگر در تساوی <span class="math inline">\(a^{x} = y\)</span> به جای <span class="math inline">\(x\)</span> مقدار معادل آن یعنی <span class="math inline">\(\log_{a}^{y}\)</span> را بگذاریم، خواهیم داشت <span class="math inline">\(a^{\log_{a}^{y}} = y\)</span>. دو رابطه <span class="math inline">\(\log_{a}^{a^{x}} = x\)</span> و <span class="math inline">\(\log_{a}^{y} = x\)</span> بیانگر این مطلب مهم هستند که لگاریتم و عمل به توان رسانیدن همدیگر را خنثا می کنند.</p>
+<p>با استفاده از قوانین نماها و تعریف لگاریتم به سادگی می توان قوانین زیر را برای لگاریتم به دست آورد:</p>
+<p>فرض کنید <span class="math inline">\(b\ ،a\)</span> و <span class="math inline">\(c \neq 1\)</span> اعداد حقیقی مثبتی باشند، در این صورت</p>
+<p>الف.لگاریتم عدد یک در هر پایه ای برابر با صفر است. یعنی</p>
+<p><span class="math display">\[\log_{c}^{1} = 0.\]</span></p>
+<p>زیرا <span class="math inline">\(.c^{0} = 0\)</span></p>
+<p>ب. لگاریتم هر عددی در پایه ی خودش برابر با یک است. یعنی</p>
+<p><span class="math display">\[\log_{c}^{c} = 1.\]</span></p>
+<p>زیرا <span class="math inline">\(.c^{1} = 1\)</span></p>
+<p>ج. لگاریتم حاصل ضرب برابر با مجموع لگاریتم ها است یعنی</p>
+<p><span class="math display">\[\log_{c}^{ab} = \log_{c}^{a} + \log_{c}^{b}.\]</span></p>
+<p>د. لگاریتم خارج قسمت برابر با تفاضل لگتریتم ها است. یعنی</p>
+<p><span class="math display">\[\log_{c}^{\frac{a}{b}} = \log_{c}^{a} - \log_{c}^{b}.\]</span></p>
+<p>ه. توان آرگومان را می توان به عنوان ضریب لگاریتم نوشت. یعنی</p>
+<p><span class="math display">\[\log_{c}^{a^{m}} = m\log_{c}^{a}.\]</span></p>
+<p>و. هر گاه در لگاریتم هم پایه و هم آرگومان لگاریتم هر دو دارای توان باشند، آن گاه این توان ها را می توان به صورت یک ضریب کسری نوشت. یعنی</p>
+<p><span class="math display">\[\log_{c^{n}}^{a^{m}} = \frac{m}{n}\log_{c}^{a};\ (n \neq 0).\]</span></p>
+<p>ز. یک لگاریتم را می توان به صورت خارج قسمت دو لگاریتم با پایه ای مشترک نوشت. یعنی</p>
+<p><span class="math display">\[\log_{b}^{a} = \frac{\log_{c}^{a}}{\log_{c}^{b}};\ (a \neq b &gt; 0).\]</span></p>
+<p>ح. در لگاریتم اگر جای پایه و آرموگان را لگاریتم را با هم عوض کنیم حاصل لگاریتم معکوس می شود. یعنی</p>
+<p><span class="math display">\[\log_{ز}^{a} = \frac{1}{\log_{a}^{c}}\overset{کردن\ وسطین$ و $ طرفین}{\Rightarrow}\log_{c}^{a} \times \log_{a}^{c} = 1.\]</span></p>
+<p>تذکر: هر گاه در لگاریتم پایه ی لگاریتم عدد 10 باشد لگاریتم را لگاریتم اعشاری می نامیم و معمولا پایه ی لگاریتم را نمی نویسیم. برای مثال، <span class="math inline">\(\log_{10}^{6}\)</span> به طور اختصار به صورت <span class="math inline">\(\log^{6}\)</span> نوشته می شود.</p>
+<blockquote class="blockquote">
+<p>تذکر: هر گاه در لگاریتم پایه ی لگاریتم عدد گنگ <span class="math inline">\(e = \frac{2}{71}\ldots\)</span> باشد معمولا لگاریتم را لگاریتم طبیعی <span class="math inline">\((natural\ logarithm)\)</span>می گویند. در این حالت لگاریتم طبیعی <span class="math inline">\(a\)</span> را با نماد <span class="math inline">\(a\)</span> <span class="math inline">\(\ln\)</span> نمایش می دهند برای مثال، <span class="math inline">\(\log_{e}^{6}\)</span> به طور اختصار به صورت <span class="math inline">\(6\)</span> <span class="math inline">\(\ln\)</span> نوشته می شود. عدد <span class="math inline">\(e\)</span> را با افتخار ریاضیدان بزرگ اسکاتلندی، جان نپر (معرف لگاریتم) عدد نپر می نامند. با توجه به تعریف لگاریتم <span class="math inline">\(y = x \Leftrightarrow e^{x} = y\)</span> <span class="math inline">\(\ln\)</span> و از آن جایی که گفته شد آرگومان لگاریتم یعنی <span class="math inline">\(y\)</span> باید مثبت باشد پس همواره <span class="math inline">\(y = e^{x} &gt; 0\)</span>. تمام قواعد ذکر شده در مورد لگاریتم، برای لگاریتم طبیعی نیز معتبر است.</p>
+</blockquote>
+<p>مثال 29. هر گاه $\left{</p>
+<span class="math display">\[\begin{matrix} log2 + log3 = a \\ log3 + log7 = b \\ log7 + log2 = c \\ \end{matrix}\]</span>
+<p>.$، آن گاه برای محاسبه <span class="math inline">\(log42\)</span> از حاصل جمع معادلات داده شده داریم:</p>
+<p><span class="math display">\[\left( \log 2 + \log 3 \right) + \left( \log 3 + \log 7 \right) + \left( \log 7 + \log 2 \right) = a + b + c\]</span></p>
+<p><span class="math display">\[\Rightarrow 2\left( \log 2 + \log 3 + \log 7 \right) = a + b + c\]</span></p>
+<p><span class="math display">\[\Rightarrow 2\log(2 \times 3 \times 7) = a + b + c\]</span></p>
+<p><span class="math display">\[\Rightarrow \log 42 = \frac{1}{2}(a + b + c)\]</span></p>
+<p><br>
+</p>
+</section>
+<section id="اعداد-اعشاری." class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="اعداد-اعشاری."><span class="header-section-number">2.7</span> اعداد اعشاری.</h2>
+<p>اعداد اعشاری به دو دسته تقسیم می شوند:</p>
+<p>الف. اعداد اعشاری مختوم (اعداد با تعداد ارقام اعشاری متناهی)، مانند <span class="math inline">\(.\frac{3}{14,}\frac{12}{21},\frac{5}{4}\)</span></p>
+<p>ب. اعداد با تمام ارقام اعشاری نامتناهی که خود به دو دسته تقسیم می شود</p>
+<ol type="1">
+<li>اعدادی که در آنها یک دسته از ارقام اعشار تکرار می شود، این دسته از اعداد گویا است.</li>
+</ol>
+<p>برای مثال</p>
+<p><span class="math display">\[\frac{1}{3} = \frac{0}{333\ldots} = \frac{0}{\overline{3}} \in Q.\]</span></p>
+<ol start="2" type="1">
+<li>هیچ دسته از ارقام اعشار به طور متناوب تکرار نمی شود، مانند اعضای <span class="math inline">\(Q^{c}\)</span> برای مثال،</li>
+</ol>
+<p><span class="math display">\[\pi = \frac{3}{1415926535\ldots}\  \in Q^{c}.\]</span></p>
+<p>همچنین</p>
+<p><span class="math display">\[e = \frac{2}{7182818284\ldots}\  \in Q^{c}.\]</span></p>
+<p>مثال 30. نشان که <span class="math inline">\(.\frac{0}{9999\ldots} = 1\)</span></p>
+<p>اثبات.</p>
+<p><span class="math display">\[0.9999\ldots = 0.9 + 0.09 + 0.009 + 0.0009 + \ldots = \frac{9}{10} + \frac{9}{100} + \frac{9}{1000} + \frac{9}{10000} + \ldots = \frac{9}{10} + \frac{9}{100} + \frac{9}{1000} + \ldots + \frac{9}{10^{5}} + \ldots = \frac{9}{10}\left( 1 + \frac{1}{10} + \frac{1}{100} + \frac{1}{1000} + \ldots \right).\]</span></p>
+<p>که عبارت داخل پرانتز یک تصاعد هندسی با قدر نسبت <span class="math inline">\(q = \frac{1}{10}\)</span> و <span class="math inline">\(t_{1 =}1\)</span> است پس</p>
+<p><span class="math display">\[\frac{0}{9999}\ldots = \frac{9}{10}\left( \frac{1}{1 - \frac{1}{10}} \right) = \frac{9}{10}\left( \frac{10}{9} \right) = 1.\]</span></p>
+<p>تذکر: از دبیرستان با تصاعد هندسی آشنایی داریم، در یک تصاعد هندسی که جمله اول آن <span class="math inline">\(t_{1}\)</span> و قدر نسبت آن <span class="math inline">\(q\)</span> باشد داریم:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(|q| &gt; 1 \Rightarrow s_{n} = \frac{t_{1}\left( 1 - q^{n} \right)}{1 - q}\)</span>.</p>
+<p><span class="math inline">\(|q| &lt; 1\overset{n \rightarrow \infty}{\Rightarrow}s_{n} = \frac{t_{1}}{1 - q}\)</span>.</p>
+</blockquote>
+<p><br>
+</p>
+</section>
+<section id="قدر-مطلق" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="قدر-مطلق"><span class="header-section-number">2.8</span> قدر مطلق</h2>
+<blockquote class="blockquote">
+<p>قدر مطلق یا اندازه ی یک عدد حقیقی <span class="math inline">\(a\)</span> که با نماد <span class="math inline">\(|a|\)</span> نمایش داده می شود، برابر با خود <span class="math inline">\(a\)</span> تعریف می شود هر گاه <span class="math inline">\(a\)</span> عددی نامنفی (مثبت یا صفر) باشد در غیر این صورت مساوی با قرینه ی <span class="math inline">\(a\)</span> تعریف می شود. به زبان نمادین</p>
+</blockquote>
+<p><span class="math display">\[|a| = \left\{ \begin{matrix}
+a\ ;\ \ \&amp; a \geq 0\ اگر \\
+- a\ ;\ \ \&amp; a &lt; 0\ اگر \\
+\end{matrix} \right.\ \]</span></p>
+<p>به عنوان مثال</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(|0| = 0\)</span>(ب</p>
+<p><span class="math inline">\(| - 0.21| = 21\)</span>(الف</p>
+<p>$|3x - 1| = \left{</p>
+<span class="math display">\[\begin{matrix} 3x - 1\ \ \ \ \ \ \ \ \ ;\ 3x - 1 \geq 0\ اگر \\  - (3x - 1)\ \ ;\ 3x - 1 &lt; 0\ اگر \\ \end{matrix}\]</span>
+<p>.$(ب</p>
+<p><span class="math inline">\(\left| - \frac{3}{5} \right| = \frac{3}{5}\)</span>(الف</p>
+</blockquote>
+<p>اما <span class="math inline">\(3x - 1 \geq 0\)</span> یعنی <span class="math inline">\(3x \geq + 1\)</span> و با تقسیم طرفین نامساوی بر <span class="math inline">\(3\)</span> داریم <span class="math inline">\(x \geq \frac{1}{3}\)</span>، همچنین <span class="math inline">\(3x - 1 &lt; 0\)</span> یعنی <span class="math inline">\(3x - 1 &lt; 0\)</span> یعنی <span class="math inline">\(3x &lt; + 1\)</span> و با تقسیم طرفین نامساوی بر <span class="math inline">\(3\)</span> داریم <span class="math inline">\(x &lt; \frac{1}{3}\)</span>، پس می توان نوشت:</p>
+<p><span class="math display">\[|3x - 1| = \left\{ \begin{matrix}
+3x - 1\ \ \ \ \ \ \ \ \ ;\ \ x \geq \frac{1}{3}\ اگر \\
+- 3x + 1\ \ \ \ \ ;\ \ \ x &lt; \frac{1}{3}\ اگر \\
+\end{matrix} \right.\ \]</span></p>
+<p>از تعریف قدر مطلق می توان فهمید، قدر مطلق هر عدد نا منفی با خود آن عدد مساوی است. برای مثال، از آن جا که توان دوم (مربع) هر عدد حقیقی مانند <span class="math inline">\(x\)</span> نامنفی است یعنی <span class="math inline">\(x^{2} \geq 0\)</span>، با افزودن <span class="math inline">\(+ 1\)</span> به طرفین این نامساوی داریم: <span class="math inline">\(x^{2} + 1 \geq 1\)</span> لذا <span class="math inline">\(x^{2} + 1 &gt; 0\)</span>، بنابراین می توان نوشت:</p>
+<p><span class="math display">\[\left| x^{2} + 1 \right| = x^{2} + 1\]</span></p>
+<p>تذکر: قبلا گفته شد به ازای هر عدد حقیقی نامنفی مانند <span class="math inline">\(a\)</span> دو عدد حقیقی مانند $–x$ و $ x$ وجود دارند به طوری که <span class="math inline">\({( - x)}^{2} = a\)</span> و $ x^{2} = a$ این اعداد را ریشه ی دوم های <span class="math inline">\(a\)</span> می نامیم و از نماد $$ فقط برای نمایش ریشه ی نامنفی استفاده می کنیم پس</p>
+<p><span class="math display">\[\sqrt{x^{2}} = \sqrt{a} = \left\{ \begin{matrix}
+x\ \ \ \ \ ;\ \ x \geq 0\ اگر \\
+- x\ ;\ \ \&amp; x &lt; 0\ اگر \\
+\end{matrix} \right.\ \]</span></p>
+<p>از مقایسه ی این رابطه با تعریف قدر مطلق، می توان نتیجه گرفت <span class="math inline">\(\sqrt{x^{2}} = |x|\)</span> .</p>
+<p>قضیه. هر گاه <span class="math inline">\(b\)</span> و $ &nbsp;a$ دو عدد حقیقی باشند و <span class="math inline">\(n\)</span> یک عدد طبیعی باشد آن گاه خواص زیر همواره برقرارند:</p>
+<p><span class="math inline">\(|a| = 0 \Leftrightarrow a = 0\)</span>(الف</p>
+<p><span class="math inline">\(|a| = | - a|\)</span> (ب</p>
+<p><span class="math inline">\(|ab| = |a||b|\)</span> (ج</p>
+<p><span class="math inline">\(\left| \frac{a}{b} \right| = \frac{|a|}{|b|}\ ;(b \neq 0)\)</span>(د</p>
+<p>هر گاه در قانون سوم <span class="math inline">\(a = b\)</span> باشد، آن گاه <span class="math inline">\(\left| a^{2} \right| = |a.a| = |a|.|a| = |a|^{2}\)</span>، که از تعمیم آن خواهیم داشت:</p>
+<p><span class="math inline">\(\left| a^{n} \right| = |a|^{n}\)</span>.</p>
+<p><strong>برهان.</strong></p>
+<p>الف. اگر <span class="math inline">\(a = 0\)</span>، آن گاه بنابر تعریف قدر مطلق <span class="math inline">\(|a| = |0| = 0\)</span>. اگر <span class="math inline">\(a \neq 0\)</span>، آن گاه <span class="math inline">\(- a \neq 0\)</span> خواهد بود چون بنا بر تعریف قدر مطلق <span class="math inline">\(|a| = \pm a\)</span>، لذا در هر صورت <span class="math inline">\(|a| \neq 0\)</span>.</p>
+<p>ب. اگر <span class="math inline">\(a = 0\)</span>، آن گاه بنا بر تعریف قدر مطلق <span class="math inline">\(|0| = 0\)</span> پس <span class="math inline">\(|0| = | - 0|\)</span>. اگر <span class="math inline">\(a &gt; 0\)</span>، آن گاه <span class="math inline">\(|a| = a\)</span>، در این حالت <span class="math inline">\(- a &lt; 0\)</span> خواهد بود، پس بنا بر تعریف <span class="math inline">\(|a| = | - a|،| - a| = - ( - a) = a\)</span><em>.</em></p>
+<p>ج. برای دو عدد حقیقی <span class="math inline">\(b\)</span> و $ a$، اگر این دو عدد نامنفی باشند، آن گاه حاصل ضرب آن ها نیز نامنفی است. پس بنا بر تعریف قدر مطلق، برای این مقادیر نامنفی داریم</p>
+<p><span class="math display">\[\left\{ \begin{matrix}
+|a| = a\ \ \ \ \  \\
+|b| = b\ \ \ \ \  \\
+|ab| = ab \\
+\end{matrix} \right.\ \]</span></p>
+<p>پس در این حالت، <span class="math inline">\(|ab| = ab = |a||b|\)</span>. اگر <span class="math inline">\(b\)</span> و $ a$ دو عدد منفی باشند، آن گاه حاصل ضرب آن ها نیز مثبت است. پس بنا بر تعریف قدر مطلق، برای این مقادیر داریم</p>
+<p><span class="math display">\[\left\{ \begin{matrix}
+|a| = - a\ \ \ \ \  \\
+|b| = - b\ \ \ \ \  \\
+|ab| = - ab \\
+\end{matrix} \right.\ \]</span></p>
+<p>در این حالت نیز <span class="math inline">\(|ab| = ab = ( - a)( - b) = |a||b|\)</span>.دو حالت مختلف دیگر را دانشجو می تواند</p>
+<p>به طور مشابه برسی نمایید.</p>
+<p>راه دوم</p>
+<p>|ab|=(ab)²=a²b²=√a²√b²=|a||b|</p>
+<p>ابتدا نشان می دهیم به ازای هر عدد حقیقی<span class="math inline">\(\frac{1}{|b|}\)</span>,≠ 0 =| <span class="math inline">\(\frac{1}{b}\)</span>|. توجه داریم که اگر bمثبت باشد آنگاه <span class="math inline">\(\frac{1}{b}\)</span> نیز مثبت است و داریم</p>
+<p>|b| =b</p>
+<p><span class="math inline">\(\frac{1}{b}\)</span>|= <span class="math inline">\(\ \frac{1}{b}\)</span>.|</p>
+<p>پس در این حالت <span class="math inline">\(\frac{1}{|b|}\)</span>, =| <span class="math inline">\(\frac{1}{b}\)</span>| ولی اگر منفی باشد آنگاه نیز منفی است داریم</p>
+<p>|b| =-b</p>
+<p><span class="math inline">\(\frac{1}{b}\)</span>|= - <span class="math inline">\(\ \frac{1}{b}\)</span>.|</p>
+<p>بنابراین در هر حالت به ازای هر عدد حقیقی حال برای اثبات مورد چهارم می توان از خاصیت سوم بهره گرفت و نوشت</p>
+<p><span class="math inline">\(\frac{a}{1}\)</span>× <span class="math inline">\(\frac{1}{b}\)</span> | =| <span class="math inline">\(\frac{a}{b}\)</span>|</p>
+<p>قدر مطلق و چند مساوی مهم</p>
+<p>قضیه . هرگاه و دو عدد حقیقی یک عدد حقیقی منفی باشد خواص زیر همواره برقرارند</p>
+<p>الف ) |a|≤ k -k ≤ a ≤ k</p>
+<p>ب) b - |a| ≤ a ≤ |a|</p>
+<p>ج) |a| ≥ k a ≥ k یا a ≤ - k</p>
+<p>د) │|a|- |b|│≤ |a±b| ≤ |a|+|b|</p>
+<p>برهان</p>
+<p>الف) چون قضیه به صورت دو شرطی (اگر و تنها اگر ) بیان شده است ابتدا فرض می کنیم ، در این صورت با توجه به اینکه یا برابر با است بنابراین از نتیجه می گیریم که هم و هم که با ضرب طرفین در یک 1- می توان نتیجه گرفت پس</p>
+<p>بر عکس فرض کنیم با ضرب طرفین در می توان نتیجه گرفت پس هم لذا بنابر تعریف باید</p>
+<p>ب) برای اثبات کافی است در قسمت اول قضیه به جای عدد را جایگزین نمایید</p>
+<p>ج) چون پس هر گاه آنگاه</p>
+<p>الف ) a ≥ 0 |a| = a ≥ k</p>
+<p>ب) a &lt; 0 |a| = -a ≥ k a ≤ -k</p>
+<p>بر عکس هر گاه یا آنگاه معادله داریم</p>
+<p>A ≥ k یا –a ≥ k</p>
+<p>پس در هر حالت خواهد داشت</p>
+<p>د) ابتدا نشان میدهیم با استفاده مکرر از قسمت دوم قضیه می توان نوشت که از جمع ای نا مساوی ها داریم</p>
+<p>-|a| ≤ a ≤ |a|</p>
+<p>-|b| ≤ b ≤ |a|</p>
+<p>________________</p>
+<p>- (|a| + |b|) ≤ a+b ≤ |a| +|b|</p>
+<p>حالا با استفاده از قسمت اول قضیه می توان نوشت :</p>
+<p>|a+b| ≤ |a| +|b|</p>
+<ol type="1">
+<li></li>
+</ol>
+<p>با توجه به اینکه ثابت کردیم نا مساوی (1) برای هر دو عدد طبیعی دلخواه درست است پس برای دو عدد نامساوی (1) می توان ه صورت زیر نوشت</p>
+<p>|a-b| ≤ |a| + |-b|</p>
+<p>اما قبلا ثابت کردیم پس نامساوی بالا را می توان به صورت زیر نوشت</p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<p>|a-b| ≤ |a| + |b|</p>
+<p>با استفاده از نا مساوی (1) می توان نوشت</p>
+<p>|a| = |a-b+b| ≤ |a-b|</p>
+<ol start="3" type="1">
+<li></li>
+</ol>
+<p>اگر در این نا مساوی (3) جای را با هم تعویض کنیم داریم</p>
+<p>|b|-|a| ≤ |b - a| = |a-b|</p>
+<p>با ضرب طرفین در 1- خواهیم داشت :</p>
+<p>-|a| - |b| ≥ -|a-b|</p>
+<ol start="4" type="1">
+<li></li>
+</ol>
+<p>حال با ادغام نامساوی (3) و (4) داریم</p>
+<p>-|a-b| ≤ |a| - |b| ≤ |a-b|</p>
+<p>که در نهایت در با استفاده از قسمت اول قضیه این نا مساوی معادل است با</p>
+<ol start="5" type="1">
+<li></li>
+</ol>
+<p>│|a| - |b|│≤ |a-b|</p>
+<p>اگر در این نا مساوی (5) جای و را با هم تعویض نماییم</p>
+<p>│|a| - |-b|│≤ |a- (-b)|</p>
+<p>│|a| - |b|│≤ |a+b)|</p>
+<ol start="6" type="1">
+<li></li>
+</ol>
+<p>از ادغام همه ی نا مساوی های (1) ، (2) ، (5) و (6) می توان نوشت:</p>
+<p>│|a| - |b|│≤ |a ± b| ≤ |a| +|b|</p>
+<p>نا مساوی های مطرح شده در قسمت چهارم به نامساو های مثلثی مشهور است کاربرد های فراوانی دارد هر جا که با نا مساوی سر و کار داشته باشیم از این نا مساوی یاد می کنیم اما اینکه چرا آن را نا مساوی مثلثی می گویند به این دلیل است که در هر مثلث اندازه هر ضلع از مجموعه اندازه های هر دو ضلع دیگر آن کوچک تر است و اندازه همین ضلع تفاضل دو ضلع دیگر بزرگتر است</p>
+<p>از مفهوم قدر مطلق برای تعریف فاصله ی بین دو نقطه روی محور اعداد استفاده می کنند</p>
+<p>فرض کنید طول این دو نقطه روی محور اعداد به ترتیب و باشد فاصله بین و را با نماد نشان داده و آن را به صورت زیر تعریف میکنیم.</p>
+<p>D(a,b) = |a - b|</p>
+<p>چون طبق خواص بالا است پس</p>
+<p>D(a,b) = |a - b| = |-(a-b)| = |b-a| = d (b,a)</p>
+<p>عدد طول پاره خط نامیده می شوند</p>
+<p>مثال 31. مجموعه همه ی اعداد حقیقی که فاصله ی آنها از کوچک تر از 0.1 اشد را مشخص نمایید.</p>
+<p>هرگاه مجموعه ی مورد نظر باشد، داریم</p>
+<p>A = {x € R : |x-2| &lt; 0.1}</p>
+<p>با توجه به خواص قدر مطلق می توان نوشت</p>
+<p>A = {x € R : 0.1 - &lt; x-2 &lt; 0.1} = { x € R : 1.9 &lt; X &lt;2.1 } = (1.9, 2.1 )</p>
+<p>ماکزیمم: بین دو یا چند عدد حقیقی عددی که بزرگتر یا مساوی این اعداد باشد ماکزیمم نامیده میشود</p>
+<p>اعداد حقیقی معمولا با نماد نمایش داده می شود و به عبارت دیگر اگر حقیقی باشد آنگاه</p>
+<p>Max {a } = m m ≥ a</p>
+<p>مینیمم بین دو یا چند عدد حقیقی عددی که کوچیکتر یا مساوی بقیه اعداد باشد مینیمم اعداد نامیده می شود. مینیمم عدد حقیقی با نماد نمایش داده می شود به عبارت دیگر اگر یک عدد حقیقی باشد آنگاه</p>
+<p>Max</p>
+<p>مثال 32. نشان دهید اگر و دو عدد حقیقی باشد آنگاه</p>
+<p>الف) max {a ,b } = )a+b) + |a-b|</p>
+<p>2</p>
+<p>ب) min {a ,b } = )a+b) - |a-b|</p>
+<p>2</p>
+<p>اثبات : برای اثبات قسمت اول کافی است نشان دهیم سمت راست تصاویر دقیقا برابر با ماکزیمم است.</p>
+<p>A ≥ b → a-b ≥ 0 →|a-b| = a-b</p>
+<p>(a+b) +|a –b| = a+b+a-b = 2a = a = MaX {a,b}</p>
+<p>__________ ______ ___</p>
+<p>2 2 2</p>
+<p>A ≤ b → a-b ≤ 0 →|a-b| = -( a-b)</p>
+<p>(a+b) +|a –b| = a+b+a+b = 2b = b = MaX {a,b}</p>
+<p>__________ ______ ___</p>
+<p>2 2 2</p>
+<p>قسمت دوم مشابه با قسمت اول اثبات می شود.</p>
+</section>
+<section id="جز-صحیح" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="جز-صحیح"><span class="header-section-number">2.9</span> جز صحیح</h2>
+<p>جز صحیح یک عدد حقیقی اگر یک عدد حقیقی باشد بزرگترین عدد صحیح کوچکتر یا مساوی با را جز صحیح می نامیم و آن را با نماد نمایش می دهیم</p>
+<p>\X\ = n → ( n ≤ x &lt; n + 1^ n € z)</p>
+<p>به عنوان مثال</p>
+<p>الف) \ √2\ = 1 ب)\<strong>- ⅔\</strong> = -1</p>
+<p>ج) \3.9\ = \4\ = 4 د) \-<span class="math inline">\(\pi\)</span>\ = - 4</p>
+<p>مثال 33 : هر گاه نشان دهید</p>
+<p>اثبات : چون پس می توان نوشت</p>
+<p>n ≤ x &lt; n+1</p>
+<p>n≤2x² - 5x +2 &lt; n+1</p>
+<p>_______________________</p>
+<p>2n≤ n≤2x² - 4x +2 &lt; 2(n+1)</p>
+<p>بنابر این</p>
+<p>\(x-1) ² \ = n = \x\ , n ≤ ( x-1 ) ² &lt; n+1</p>
+<p>از تعریف جز صحیح روشن است جز صحیح هر عدد صحیح مساوی با خودش است. همچنین مستقیما از تعریف می توان نتیجه گرفت</p>
+<p>X € R ; \x\ ≤ x &lt; \ x \ +1</p>
+<p>X € R ; x-1&lt; \x\ ≤ x</p>
+<p>قضیه : هر گاه دو عدد حقیقی و نیز به ترتیب عدد های طبیعی و صحیح باشند آنگاه خواص زیر برقرار است</p>
+<p>الف) \x\ + \-x\ = 0; X € Z</p>
+<p>-1; X € Z</p>
+<p>ب ) \x\ +\y\ ≤ \x+y\</p>
+<p>ج) \x+y\ = \x\ +k</p>
+<p>که در مورد آخر برای زوج مقدار باید منفی باشد</p>
+<p>الف . اگر عددی صحیح باشد واضح است نیز چنین است پس</p>
+<p>\x\ +\-x\ = x + ( -x) =0</p>
+<p>اما هر گاه عدد صحیحی نباشد آنگاه عدد صحیح چنان موجود است که پس</p>
+<p>-( k+1) &lt; -X &lt; -k</p>
+<p>و لذا</p>
+<p>\x\ = k</p>
+<p>\-x\ = - (K+1)</p>
+<p>________________</p>
+<p>\x\ + \-x\ = -1</p>
+<p>ب) فرض کنیم بنا بر تعریف جز صحیح می توان نوشت</p>
+<p>\x\ = N → X = n+p</p>
+<p>که جز اعشاری عدد است و</p>
+<p>\y\ = M → Y= M+q</p>
+<p>که جز اعشاری عدد است بنابر این</p>
+<p>\X\ + \y\ ≤ n+m + p +q ; 0 ≤ p + q &lt; 2</p>
+<p>حال دو حالت زیر را در نظر می گیریم :</p>
+<p>0 ≤ p+q &lt; 1 → \X+y \ = m+n= \ X\ + \y\</p>
+<p>1≤ p+q &lt; 2 → \X+y \ = m+n+1= \ X\ + \y\ +1</p>
+<p>همان گونه که ملاحظه می کنید همواره</p>
+<p>ج) فرض کنید پس</p>
+<p>\x\ = n → n ≤ x &lt; n +1 → n+k ≤ x+k &lt; n+k +1 → \x+k\ = n+k</p>
+<p>بنابر این</p>
+<p>\x+k\ = \x\+k</p>
+<p>x-1 &lt; \x\ ≤ x</p>
+<p>x-1 \x\ x x 1 \x\ x</p>
+<p>____ &lt; ___ ≤ ___ → ___ - __ &lt; ___ ≤ ___</p>
+<p>n n n n n n n</p>
+<p>اما بنابر این می توان نوشت :</p>
+<p>x \x\ x x \x\ x</p>
+<p>____ -1 ≤ ___ ≤ ___ → ___ - ____ +1 ≤ ___ +1</p>
+<p>n n n n n n</p>
+<p>برای دو حالت پیش می آید</p>
+<p>\x\ X \x\ \x\ \x\ x \x\</p>
+<p>____ +1 = ____ +1 ____ +1 = ___ +1 → ____ +1 = ___ +1→ ____</p>
+<p>n n n n n n n</p>
+<p>یا</p>
+<p>X \x\ x \x\ x \x\ x</p>
+<p>___ ≤ ___ +1 &lt; __ + 1 → ____ +1 = ___ → ___ +1 = ___</p>
+<p>n n n n n n n</p>
+<p>ه ) با به کار بردن قانون (ج ) و (د) داریم :</p>
+<p>X+k \x+k\ \x\ + k</p>
+<p>_____ = ____ = ________</p>
+<p>n n n</p>
+<p>و. در حالتی که یا عددی صحیح باشد به وضوح دو طرف نا مساوی با هم برابرند. پس باید نا مساوی را برای حالت اثبات نماییم. فرض کنیم یک عدد غیر صحیح و منفی باشد با فرض داریم.</p>
+<p>| \x\ | = |n| = -n (I)</p>
+<p>\x\ = n → n &lt; x &lt; n +1</p>
+<p>→ - ( n+1) &lt; -x &lt; -n</p>
+<p>→ \-x\ = -n-1</p>
+<p>X &lt;0→|x|= -x \|x|\ = \-x \ = -n -1(II)</p>
+<p>از روابط به سادگی نتیجه می گیریم</p>
+<p>ز) فرض می کنیم داریم</p>
+<p>\ⁿ√x\ = k → k ≤ ⁿ√x &lt; k+1 → kⁿ ≤ x &lt; (k+1)ⁿ (*)</p>
+<p>از نا مساوی ستاره نتیجه می گیریم پس با یکی از اعداد صحیح زیر برابر است</p>
+<p>kⁿ , kⁿ +1 , kⁿ +2 ,…. ( k+1) ⁿ -1</p>
+<p>بنابر این</p>
+<p>kⁿ ≤ \x\ &lt; ( k+1 ) ⁿ → k ≤ ⁿ √\x\ &lt; (k+1) → \ⁿ√\x\ \ =k</p>
+<p>و به این ترتیب اثبات قضیه پایان می رسد</p>
+<p>تمرین</p>
+<p>4-1 بدون استفاده از ماشین حساب حاصل را به دست آورید</p>
+<ol type="1">
+<li>(5ₓ10‐⁶) (4ₓ10²) 2. (0.00004)(25.000)</li>
+</ol>
+<blockquote class="blockquote">
+<p>______________ ________________</p>
+<p>8ₓ10⁵ (0.2)⁵ (0.125)</p>
+</blockquote>
+<p>3. ¾ log⅛ 1 4. 4log 2⁸</p>
+<p>_____</p>
+<p>128</p>
+<p>8-5 بدون استفاده از ماشین حساب مشخص کند کدام مقدار بزرگ تر است ؟ چرا ؟</p>
+<ol start="5" type="1">
+<li>√3 + √5 یا √2 +√6 6. √11-√3 یا √10-√2</li>
+</ol>
+<p>7. 10 33 8. 1</p>
+<p>_____ یا _____ ____ یا 0.33333333</p>
+<p>3 10 3</p>
+<p>12-9 بسط اعشاری هر یک از اعداد زیر را بنویسید</p>
+<p>9. 3 10. √5</p>
+<p>____</p>
+<p>7</p>
+<p>11. 0.428571 12. 2.2360679</p>
+<ol start="13" type="1">
+<li>نشان دهید</li>
+</ol>
+<p>1+√3 + √5 12√5 -2√15+14 √3-7</p>
+<p>___________ = ____________________</p>
+<p>1-√3 + √5 11</p>
+<ol start="14" type="1">
+<li>نشان دهید برای هر عدد طبیعی دارید:</li>
+</ol>
+<p>½ + ¼ + ⅛ + … + ½ⁿ-¹ &lt; 1.</p>
+<ol start="15" type="1">
+<li>اگر نشان دهید</li>
+</ol>
+<p>a+b</p>
+<p>_______ ≥ √ab</p>
+<p>2</p>
+<p>16.اگر یک عدد طبیعی باشد و نشان دهید</p>
+<p>ⁿ√ a &lt; ⁿ√b</p>
+<ol start="17" type="1">
+<li>نشان دهید</li>
+</ol>
+<p>الف ) برای هر عدد حقیقی داریم</p>
+<p>ب) برای هر عدد حقیقی داریم</p>
+<ol start="18" type="1">
+<li>هر گاه یک عدد طبیعی باشد نشان دهید برای هر داریم</li>
+</ol>
+<p>1 1</p>
+<p>xⁿ — &lt; xⁿ+¹ + —</p>
+<p>xⁿ</p>
+<p>xⁿ+¹</p>
+</section>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Set/intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">نظریه مجموعه ها</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../chapters/Functions/intro.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">مثلثات</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../pages/about.html">درباره ما</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../pages/license.html">License</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
